@@ -37,7 +37,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="ew" Content="Тема &#xD;&#xA;практической работы" HorizontalAlignment="Left" Margin="18,242,0,0" VerticalAlignment="Top" Width="150" Foreground="Red"/>
-        <ComboBox x:Name="whoPra" HorizontalAlignment="Left" Margin="175,262,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" Foreground="#FFFFC500"/>
+        <ComboBox DisplayMemberPath="Name" x:Name="whoPra" HorizontalAlignment="Left" Margin="175,262,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" Foreground="#FFFFC500"/>
         <Button Click="Button_Click_1" Content="Поддтвердить" HorizontalAlignment="Left" Margin="26,318,0,0" VerticalAlignment="Top" Width="100" Background="#FF2AFF09"/>
         <Button Click="Button_Click" Content="Отмена" HorizontalAlignment="Left" Margin="178,318,0,0" VerticalAlignment="Top" Width="100" Background="#FF09FFDD"/>
 

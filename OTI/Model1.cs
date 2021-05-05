@@ -27,8 +27,7 @@ namespace OTI
                 .HasForeignKey(e => e.WhoHead);
 
             modelBuilder.Entity<Prak>()
-                .Property(e => e.date)
-                .IsFixedLength();
+                .Property(e => e.date);
 
             modelBuilder.Entity<Roul>()
                 .HasMany(e => e.User)

@@ -37,9 +37,13 @@ namespace OTI
             }
             if (f == 2)
             {
-                WW = 2;
-                ew.Visibility = Visibility.Visible;
-                whoPra.Visibility = Visibility.Visible;
+                using (Model1 ui = new Model1())
+                {
+                    WW = 2;
+                    ew.Visibility = Visibility.Visible;
+                    whoPra.Visibility = Visibility.Visible;
+                    whoPra.ItemsSource = ui.HeadPark.ToList();
+                }
 
             }
             if (f == 3)
@@ -60,9 +64,9 @@ namespace OTI
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            using( Model1 ui = new Model1())
+            using (Model1 ui = new Model1())
             {
-                if(WW == 1)
+                if (WW == 1)
                 {
                     _lec.Name = NNam.Text;
                     _lec.Head = HHed.Text;
@@ -73,13 +77,18 @@ namespace OTI
                     System.Windows.MessageBox.Show("Данные сохранены");
                     this.Close();
                 }
+                if (WW == 3)
+                {
+
+                }
                 if(WW == 2)
                 {
                     _pra.Name = NNam.Text;
                     _pra.Head = HHed.Text;
                     _pra.date = DDat.SelectedDate;
                     _pra.linkS = $@"Практика\{Path.GetFileName(putin)}";
-                    ui.leck.Add(_lec);
+                    _pra.WhoHead = int.Parse(whoPra.SelectedItem.ToString());
+                    ui.Prak.Add(_pra);
                     ui.SaveChanges();
                     System.Windows.MessageBox.Show("Данные сохранены");
                     this.Close();

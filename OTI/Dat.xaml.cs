@@ -42,7 +42,8 @@ namespace OTI
                 {
                     var s = ((sender as Button).DataContext as HeadPark);
                     Grid.ItemsSource = v.Prak.Where( p => p.WhoHead == s.ID).ToList();
-                    k = 3;
+                    Grid.Columns[2].Visibility = Visibility.Visible;
+                    k = 2;
                 }
             }
         }
@@ -61,15 +62,16 @@ namespace OTI
                     sd.Content = "Лекции";
                     Grid.ItemsSource = v.leck.ToList();
                     k = 1;
+                    j = 0;
                 }
                 if (x == 2)
                 {
                     sd.Content = "Практические";
                     Grid.ItemsSource = v.HeadPark.ToList();
                     Grid.Columns[2].Visibility = Visibility.Hidden;
-                    j += 1;
+                    j = 1;
                     ds.Visibility = Visibility.Visible;
-                    k = 2;
+                    k = 3;
 
                 }
             }
