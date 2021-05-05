@@ -73,6 +73,17 @@ namespace OTI
                     System.Windows.MessageBox.Show("Данные сохранены");
                     this.Close();
                 }
+                if(WW == 2)
+                {
+                    _pra.Name = NNam.Text;
+                    _pra.Head = HHed.Text;
+                    _pra.date = DDat.SelectedDate;
+                    _pra.linkS = $@"Практика\{Path.GetFileName(putin)}";
+                    ui.leck.Add(_lec);
+                    ui.SaveChanges();
+                    System.Windows.MessageBox.Show("Данные сохранены");
+                    this.Close();
+                }
             }
         }
 

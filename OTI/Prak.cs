@@ -14,8 +14,7 @@ namespace OTI
         [StringLength(300)]
         public string Name { get; set; }
 
-        [StringLength(10)]
-        public string date { get; set; }
+        public DateTime? date { get; set; }
 
         [StringLength(300)]
         public string Head { get; set; }
