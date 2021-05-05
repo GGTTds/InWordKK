@@ -1,0 +1,67 @@
+﻿<Window x:Class="OTI.Dat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OTI"
+        mc:Ignorable="d"
+        Title="Учебный материал" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/abs0299.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label x:Name="sd" Content="Лекции" Margin="0,10,0,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Center" Width="192" Foreground="Red" FontWeight="Bold" FontSize="22"/>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="Grid" Margin="80,81,80,85" Foreground="Black" Background="#FF415C7C">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="EditBtn" Content="Просмотреть" Width="auto" Click="EditBtn_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Задание" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Head}"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="EditBtn1" Content="Редактировать" Width="auto" Click="EditBtn1_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="ds" Content="Назад" HorizontalAlignment="Center" Margin="608,82,80,0" VerticalAlignment="Top" Height="23" Width="106" Click="Button_Click" BorderBrush="Red">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF3F3F3"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Добавить" HorizontalAlignment="Center" Margin="140,369,512,0" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click_1" BorderBrush="Red">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF3F3F3"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Удалить" HorizontalAlignment="Center" Margin="483,369,169,0" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click_2" BorderBrush="Red">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF3F3F3"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

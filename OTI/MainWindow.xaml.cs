@@ -24,5 +24,39 @@ namespace OTI
         {
             InitializeComponent();
         }
+
+        private void VX_Click(object sender, RoutedEventArgs e)
+        {
+            using (Model1 b = new Model1())
+            {
+                int n = 0;
+                var m = b.User.ToList();
+                var v = m.Where(p => p.Logg.Equals(loggg.Text)).Where(p => p.Pass.Equals(passs.Password)).ToList();
+                foreach (var x in v)
+                {
+                    if (x.Logg != null)
+                    {
+                        n += 1;
+                        Static.ID = x.Rol;
+                        NextMenu ww = new NextMenu();
+                        ww.Show();
+                        this.Close();
+
+                    }
+
+                }
+                if (n == 0)
+                { MessageBox.Show(" Неправильный логин или пароль", "Ошибка"); }
+
+            }
+        }
+
+        private void RG_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            Static.ID = 2;
+            NextMenu ww = new NextMenu();
+            ww.Show();
+            this.Close();
+        }
     }
 }
