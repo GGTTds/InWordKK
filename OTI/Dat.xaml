@@ -56,7 +56,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Добавить" HorizontalAlignment="Center" Margin="380,409,377,0" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click_1" BorderBrush="Red">
+        <Button x:Name="fd" Content="Добавить" HorizontalAlignment="Center" Margin="380,409,377,0" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click_1" BorderBrush="Red">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF3F3F3"/>

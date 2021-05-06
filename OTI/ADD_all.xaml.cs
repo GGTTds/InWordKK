@@ -108,6 +108,8 @@ namespace OTI
                 string con = @"data source=localhost\sqlexpress;initial catalog=BDOTI;integrated security=True;MultipleActiveResultSets=True;";
                 if (WWS == 1)
                 {
+                    pu.Visibility = Visibility.Hidden;
+                    put.Visibility = Visibility.Hidden;
                     _lec.Name = NNam.Text;
                     _lec.Head = HHed.Text;
                     _lec.date = DDat.SelectedDate;
@@ -126,22 +128,45 @@ namespace OTI
                 }
                 if (WWS == 2)
                 {
-                    _lec.Name = NNam.Text;
-                    _lec.Head = HHed.Text;
-                    _lec.date = DDat.SelectedDate;
-                    _lec.linkS = PP.Text;
+                    pu.Visibility = Visibility.Hidden;
+                    put.Visibility = Visibility.Hidden;
+                    _pra.Name = NNam.Text;
+                    _pra.Head = HHed.Text;
+                    _pra.date = DDat.SelectedDate;
+                    _pra.linkS = PP.Text;
 
                     using (SqlConnection connection = new SqlConnection(con))
                     {
 
                         connection.Open();
-                        string kl = $@"UPDATE leck SET Name ='{NNam.Text}', date ='{DDat.SelectedDate}', Head ='{HHed.Text}', linkS='{PP.Text}' WHERE id ={ID}";
+                        string kl = $@"UPDATE Prak SET Name ='{NNam.Text}', date ='{DDat.SelectedDate}', Head ='{HHed.Text}', linkS='{PP.Text}' WHERE id ={ID}";
                         SqlCommand command = new SqlCommand(kl, connection);
                         int numb = command.ExecuteNonQuery();
                         System.Windows.MessageBox.Show("Данные сохранены");
                         this.Close();
                     }
                 }
+                if (WWS == 3)
+                {
+
+                   
+                    _pra.Name = NNam.Text;
+                    _pra.Head = HHed.Text;
+                    _pra.date = DDat.SelectedDate;
+                    _pra.linkS = PP.Text;
+
+                    using (SqlConnection connection = new SqlConnection(con))
+                    {
+
+                        connection.Open();
+                        string kl = $@"UPDATE HeadPark SET Name ='{HHed.Text}', date ='{DDat.SelectedDate}'  WHERE id ={ID}";
+                        SqlCommand command = new SqlCommand(kl, connection);
+                        int numb = command.ExecuteNonQuery();
+                        System.Windows.MessageBox.Show("Данные сохранены");
+                        this.Close();
+                    }
+                }
+
 
 
 
@@ -184,12 +209,15 @@ namespace OTI
         }
         public void GETWH(HeadPark f)
         {
-           
-            //NNam.Text = f.Name;
-            //HHed.Text = f.Head;
-            //DDat.SelectedDate = f.date;
-            //PP.Text = f.linkS;
-            //ID = f.ID;
+            zad.Visibility = Visibility.Hidden;
+            NNam.Visibility = Visibility.Hidden;
+            zag.Visibility = Visibility.Visible;
+            zag.Visibility = Visibility.Hidden;
+            pu.Visibility = Visibility.Hidden;
+            put.Visibility = Visibility.Hidden;
+            HHed.Text = f.Name;
+            DDat.SelectedDate = f.date;
+            ID = f.ID;
         }
     }
 }

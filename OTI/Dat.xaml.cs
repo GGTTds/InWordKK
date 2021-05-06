@@ -26,9 +26,17 @@ namespace OTI
         public Dat( int g)
         {
             InitializeComponent();
-            ds.Visibility = Visibility.Hidden;
-            Grid.Columns[0].Visibility = Visibility.Hidden;
-            GetSourGrid(g);
+            if (Static.QStatus == 2)
+            {
+                WhoIS();
+            }
+            else
+            {
+                ds.Visibility = Visibility.Hidden;
+                Grid.Columns[0].Visibility = Visibility.Hidden;
+                GetSourGrid(g);
+            }
+
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
@@ -51,12 +59,16 @@ namespace OTI
                     sd.Content = "Практические работы";
                     Grid.ItemsSource = v.Prak.Where( p => p.WhoHead == s.ID).ToList();
                     Static._IF = s.ID;
-                    Grid.Columns[3].Visibility = Visibility.Visible;
-                    Grid.Columns[0].Visibility = Visibility.Visible;
-                    Grid.Columns[1].Visibility = Visibility.Hidden;
-                    Grid.Columns[2].Width = 150;
-                    Static.Nom = s.ID;
-                    k = 2;
+                    if (Static.QStatus == 1)
+                    {
+                        Grid.Columns[3].Visibility = Visibility.Visible;
+                        Grid.Columns[0].Visibility = Visibility.Visible;
+                        Grid.Columns[1].Visibility = Visibility.Hidden;
+
+                        Grid.Columns[2].Width = 150;
+                        Static.Nom = s.ID;
+                        k = 2;
+                    }
                     
                 }
             }
@@ -77,14 +89,14 @@ namespace OTI
             if (k == 2)
             {
                 var s = ((sender as Button).DataContext as Prak);
-                ADD_all ww = new ADD_all(0, 1);
+                ADD_all ww = new ADD_all(0, 2);
                 ww.GEtPrak(s);
                 ww.Show();
             }
             if (k == 3)
             {
                 var s = ((sender as Button).DataContext as HeadPark);
-                ADD_all ww = new ADD_all(0, 1);
+                ADD_all ww = new ADD_all(0, 3);
                 ww.GETWH(s);
                 ww.Show();
             }
@@ -122,9 +134,12 @@ namespace OTI
 
                 Grid.ItemsSource = v.HeadPark.ToList();
                 Grid.Columns[2].Width = 450;
-                Grid.Columns[0].Visibility = Visibility.Hidden;
-                Grid.Columns[1].Visibility = Visibility.Visible;
-                Grid.Columns[3].Visibility = Visibility.Hidden;
+                if (Static.QStatus == 1)
+                {
+                    Grid.Columns[0].Visibility = Visibility.Hidden;
+                    Grid.Columns[1].Visibility = Visibility.Visible;
+                    Grid.Columns[3].Visibility = Visibility.Hidden;
+                }
             }
         }
 
@@ -222,6 +237,18 @@ namespace OTI
                 
             }
         }
+   
+    public void WhoIS()
+        {
+            if(Static.QStatus == 2)
+            {
+                Grid.Columns[1].Visibility = Visibility.Hidden;
+                Grid.Columns[5].Visibility = Visibility.Hidden;
+                Grid.Columns[6].Visibility = Visibility.Hidden;
+                fd.Visibility = Visibility.Hidden;
+            }
+        }
+    
     }
 }
 
