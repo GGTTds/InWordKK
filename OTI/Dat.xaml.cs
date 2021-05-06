@@ -26,6 +26,7 @@ namespace OTI
         {
             InitializeComponent();
             ds.Visibility = Visibility.Hidden;
+            Grid.Columns[0].Visibility = Visibility.Hidden;
             GetSourGrid(g);
         }
 
@@ -42,10 +43,16 @@ namespace OTI
                 {
                     var s = ((sender as Button).DataContext as HeadPark);
                     Grid.ItemsSource = v.Prak.Where( p => p.WhoHead == s.ID).ToList();
-                    Grid.Columns[2].Visibility = Visibility.Visible;
+                    Grid.Columns[3].Visibility = Visibility.Visible;
+                    Grid.Columns[0].Visibility = Visibility.Visible;
+                    Grid.Columns[1].Visibility = Visibility.Hidden;
+                    Grid.Columns[2].Width = 150;
+                    Static.Nom = s.ID;
                     k = 2;
+                    
                 }
             }
+           
         }
 
         private void EditBtn1_Click(object sender, RoutedEventArgs e)
@@ -68,7 +75,7 @@ namespace OTI
                 {
                     sd.Content = "Практические";
                     Grid.ItemsSource = v.HeadPark.ToList();
-                    Grid.Columns[2].Visibility = Visibility.Hidden;
+                    Grid.Columns[3].Visibility = Visibility.Hidden;
                     j = 1;
                     ds.Visibility = Visibility.Visible;
                     k = 3;
@@ -83,6 +90,10 @@ namespace OTI
             {
 
                 Grid.ItemsSource = v.HeadPark.ToList();
+                Grid.Columns[2].Width = 450;
+                Grid.Columns[0].Visibility = Visibility.Hidden;
+                Grid.Columns[1].Visibility = Visibility.Visible;
+                Grid.Columns[3].Visibility = Visibility.Hidden;
             }
         }
 
@@ -111,7 +122,12 @@ namespace OTI
             //del
         }
 
-
+        private void ddd_Click(object sender, RoutedEventArgs e)
+        {
+            //fri
+            var s = ((sender as Button).DataContext as Prak);
+            Process.Start(s.linkS);
+        }
     }
 }
 

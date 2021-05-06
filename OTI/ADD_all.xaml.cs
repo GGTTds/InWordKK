@@ -68,6 +68,7 @@ namespace OTI
             {
                 if (WW == 1)
                 {
+                   
                     _lec.Name = NNam.Text;
                     _lec.Head = HHed.Text;
                     _lec.date = DDat.SelectedDate;
@@ -87,7 +88,7 @@ namespace OTI
                     _pra.Head = HHed.Text;
                     _pra.date = DDat.SelectedDate;
                     _pra.linkS = $@"Практика\{Path.GetFileName(putin)}";
-                    _pra.WhoHead = int.Parse(whoPra.SelectedItem.ToString());
+                    _pra.WhoHead = Static.Nom;
                     ui.Prak.Add(_pra);
                     ui.SaveChanges();
                     System.Windows.MessageBox.Show("Данные сохранены");
