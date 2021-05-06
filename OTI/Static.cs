@@ -10,5 +10,6 @@ namespace OTI
     {
         public static int? ID = null;
         public static int? Nom = null;
+        public static int? _IF = null;
     }
 }

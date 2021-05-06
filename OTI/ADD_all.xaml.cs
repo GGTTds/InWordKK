@@ -28,8 +28,7 @@ namespace OTI
         public ADD_all(int f, int t)
         {
             InitializeComponent();
-            whoPra.Visibility = Visibility.Hidden;
-            ew.Visibility = Visibility.Hidden;
+           
           
             if(f == 1)
             {
@@ -40,9 +39,7 @@ namespace OTI
                 using (Model1 ui = new Model1())
                 {
                     WW = 2;
-                    ew.Visibility = Visibility.Visible;
-                    whoPra.Visibility = Visibility.Visible;
-                    whoPra.ItemsSource = ui.HeadPark.ToList();
+                   
                 }
 
             }
@@ -50,10 +47,11 @@ namespace OTI
             {
                 zad.Visibility = Visibility.Hidden;
                 NNam.Visibility = Visibility.Hidden;
-                zag.Visibility = Visibility.Hidden;
+                zag.Visibility = Visibility.Visible;
                 zag.Visibility = Visibility.Hidden;
                 pu.Visibility = Visibility.Hidden;
                 put.Visibility = Visibility.Hidden;
+                WW = 3;
             }
         }
 
@@ -80,6 +78,12 @@ namespace OTI
                 }
                 if (WW == 3)
                 {
+                    _hea.Name = HHed.Text;
+                    _hea.date = DDat.SelectedDate;
+                    ui.HeadPark.Add(_hea);
+                    ui.SaveChanges();
+                    System.Windows.MessageBox.Show("Данные сохранены");
+                    this.Close();
 
                 }
                 if(WW == 2)

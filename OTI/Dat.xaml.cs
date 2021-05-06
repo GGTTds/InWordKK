@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using System.Data.SqlClient;
 
 namespace OTI
 {
@@ -42,7 +43,9 @@ namespace OTI
                 using (Model1 v = new Model1())
                 {
                     var s = ((sender as Button).DataContext as HeadPark);
+                    sd.Content = "Практические работы";
                     Grid.ItemsSource = v.Prak.Where( p => p.WhoHead == s.ID).ToList();
+                    Static._IF = s.ID;
                     Grid.Columns[3].Visibility = Visibility.Visible;
                     Grid.Columns[0].Visibility = Visibility.Visible;
                     Grid.Columns[1].Visibility = Visibility.Hidden;
@@ -73,7 +76,7 @@ namespace OTI
                 }
                 if (x == 2)
                 {
-                    sd.Content = "Практические";
+                    sd.Content = "Темы";
                     Grid.ItemsSource = v.HeadPark.ToList();
                     Grid.Columns[3].Visibility = Visibility.Hidden;
                     j = 1;
@@ -119,7 +122,9 @@ namespace OTI
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //del
+            
+            
+
         }
 
         private void ddd_Click(object sender, RoutedEventArgs e)
@@ -127,6 +132,73 @@ namespace OTI
             //fri
             var s = ((sender as Button).DataContext as Prak);
             Process.Start(s.linkS);
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            using (Model1 s = new Model1())
+            {
+                if( k == 1)
+                {
+                    s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                    Grid.ItemsSource = s.leck.ToList();
+                }
+                if (k == 2)
+                {
+                    s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                    Grid.ItemsSource = s.Prak.Where(p => p.WhoHead == Static._IF).ToList();
+                }
+                if (k == 3)
+                {
+                    s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                    Grid.ItemsSource = s.HeadPark.ToList();
+                }
+            }
+        }
+
+        private void ddd_Click_1(object sender, RoutedEventArgs e)
+        {
+            //del
+            using(Model1 s = new Model1())
+            {
+                
+                    
+                    string con = @"data source=localhost\sqlexpress;initial catalog=BDOTI;integrated security=True;MultipleActiveResultSets=True;";
+                using (SqlConnection connection = new SqlConnection(con))
+                {
+
+                    if (k == 1)
+                    {
+                        var g = ((sender as Button).DataContext as leck);
+                        connection.Open();
+                        string kl = $@"DELETE FROM Leck WHERE ID ={g.ID}";
+                        SqlCommand command = new SqlCommand(kl, connection);
+                        int numb = command.ExecuteNonQuery();
+                        MessageBox.Show("Запись удалена!");
+                    }
+                    if (k == 2)
+                    {
+                        var g = ((sender as Button).DataContext as Prak);
+                        connection.Open();
+                        string kl = $@"DELETE FROM Prak WHERE ID ={g.ID}";
+                        SqlCommand command = new SqlCommand(kl, connection);
+                        int numb = command.ExecuteNonQuery();
+                        MessageBox.Show("Запись удалена!");
+                    }
+                    if (k == 3)
+                    {
+                        var g = ((sender as Button).DataContext as HeadPark);
+                        connection.Open();
+                        string kl = $@"DELETE FROM HeadPark WHERE ID ={g.ID}";
+                        SqlCommand command = new SqlCommand(kl, connection);
+                        int numb = command.ExecuteNonQuery();
+                        MessageBox.Show("Запись удалена!");
+                    }
+
+                }
+                    
+                
+            }
         }
     }
 }
