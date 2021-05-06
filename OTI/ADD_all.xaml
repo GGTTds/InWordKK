@@ -38,6 +38,8 @@
         </Button>
         <Button Click="Button_Click_1" Content="Поддтвердить" HorizontalAlignment="Left" Margin="52,314,0,0" VerticalAlignment="Top" Width="100" Background="#FF2AFF09"/>
         <Button Click="Button_Click" Content="Отмена" HorizontalAlignment="Left" Margin="204,314,0,0" VerticalAlignment="Top" Width="100" Background="#FF09FFDD"/>
+        <Label x:Name="zad_Copy" Content="Путь" HorizontalAlignment="Left" Margin="18,254,0,0" VerticalAlignment="Top" Width="100" Foreground="Red"/>
+        <TextBox x:Name="PP" HorizontalAlignment="Left" Height="23" Margin="175,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Background="{x:Null}" Foreground="#FFFFC500"/>
 
     </Grid>
 </Window>

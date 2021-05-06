@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Data.SqlClient;
 
 namespace OTI
 {
@@ -21,6 +22,8 @@ namespace OTI
     public partial class ADD_all : Window
     {
         public static int? WW = null;
+        public static int? WWS = null;
+        public static int? ID = null;
         public Prak _pra = new Prak();
         public leck _lec = new leck();
         public HeadPark _hea = new HeadPark();
@@ -28,7 +31,9 @@ namespace OTI
         public ADD_all(int f, int t)
         {
             InitializeComponent();
-           
+            zad_Copy.Visibility = Visibility.Hidden;
+            PP.Visibility = Visibility.Hidden;
+            WWS = t;
           
             if(f == 1)
             {
@@ -36,11 +41,10 @@ namespace OTI
             }
             if (f == 2)
             {
-                using (Model1 ui = new Model1())
-                {
+                
                     WW = 2;
                    
-                }
+                
 
             }
             if (f == 3)
@@ -64,40 +68,85 @@ namespace OTI
         {
             using (Model1 ui = new Model1())
             {
-                if (WW == 1)
+                if (WWS == 0)
                 {
-                   
+                    if (WW == 1)
+                    {
+
+                        _lec.Name = NNam.Text;
+                        _lec.Head = HHed.Text;
+                        _lec.date = DDat.SelectedDate;
+                        _lec.linkS = $@"Лекции\{Path.GetFileName(putin)}";
+                        ui.leck.Add(_lec);
+                        ui.SaveChanges();
+                        System.Windows.MessageBox.Show("Данные сохранены");
+                        this.Close();
+                    }
+                    if (WW == 3)
+                    {
+                        _hea.Name = HHed.Text;
+                        _hea.date = DDat.SelectedDate;
+                        ui.HeadPark.Add(_hea);
+                        ui.SaveChanges();
+                        System.Windows.MessageBox.Show("Данные сохранены");
+                        this.Close();
+
+                    }
+                    if (WW == 2)
+                    {
+                        _pra.Name = NNam.Text;
+                        _pra.Head = HHed.Text;
+                        _pra.date = DDat.SelectedDate;
+                        _pra.linkS = $@"Практика\{Path.GetFileName(putin)}";
+                        _pra.WhoHead = Static.Nom;
+                        ui.Prak.Add(_pra);
+                        ui.SaveChanges();
+                        System.Windows.MessageBox.Show("Данные сохранены");
+                        this.Close();
+                    }
+                }
+                string con = @"data source=localhost\sqlexpress;initial catalog=BDOTI;integrated security=True;MultipleActiveResultSets=True;";
+                if (WWS == 1)
+                {
                     _lec.Name = NNam.Text;
                     _lec.Head = HHed.Text;
                     _lec.date = DDat.SelectedDate;
-                    _lec.linkS = $@"Лекции\{Path.GetFileName(putin)}";
-                    ui.leck.Add(_lec);
-                    ui.SaveChanges();
-                    System.Windows.MessageBox.Show("Данные сохранены");
-                    this.Close();
-                }
-                if (WW == 3)
-                {
-                    _hea.Name = HHed.Text;
-                    _hea.date = DDat.SelectedDate;
-                    ui.HeadPark.Add(_hea);
-                    ui.SaveChanges();
-                    System.Windows.MessageBox.Show("Данные сохранены");
-                    this.Close();
+                    _lec.linkS = PP.Text;
 
+                    using (SqlConnection connection = new SqlConnection(con))
+                    {
+
+                        connection.Open();
+                        string kl = $@"UPDATE leck SET Name ='{NNam.Text}', date ='{DDat.SelectedDate}', Head ='{HHed.Text}', linkS='{PP.Text}' WHERE id ={ID}";
+                        SqlCommand command = new SqlCommand(kl, connection);
+                        int numb = command.ExecuteNonQuery();
+                        System.Windows.MessageBox.Show("Данные сохранены");
+                        this.Close();
+                    }
                 }
-                if(WW == 2)
+                if (WWS == 2)
                 {
-                    _pra.Name = NNam.Text;
-                    _pra.Head = HHed.Text;
-                    _pra.date = DDat.SelectedDate;
-                    _pra.linkS = $@"Практика\{Path.GetFileName(putin)}";
-                    _pra.WhoHead = Static.Nom;
-                    ui.Prak.Add(_pra);
-                    ui.SaveChanges();
-                    System.Windows.MessageBox.Show("Данные сохранены");
-                    this.Close();
+                    _lec.Name = NNam.Text;
+                    _lec.Head = HHed.Text;
+                    _lec.date = DDat.SelectedDate;
+                    _lec.linkS = PP.Text;
+
+                    using (SqlConnection connection = new SqlConnection(con))
+                    {
+
+                        connection.Open();
+                        string kl = $@"UPDATE leck SET Name ='{NNam.Text}', date ='{DDat.SelectedDate}', Head ='{HHed.Text}', linkS='{PP.Text}' WHERE id ={ID}";
+                        SqlCommand command = new SqlCommand(kl, connection);
+                        int numb = command.ExecuteNonQuery();
+                        System.Windows.MessageBox.Show("Данные сохранены");
+                        this.Close();
+                    }
                 }
+
+
+
+
+
             }
         }
 
@@ -109,6 +158,38 @@ namespace OTI
                 putin = dialog.FileName;
                 DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Путь к файлу задан", "Файл", MessageBoxButtons.OK);
             }
+        }
+
+        public void GETleck(leck f)
+        {
+            zad_Copy.Visibility = Visibility.Visible;
+            PP.Visibility = Visibility.Visible;
+
+            NNam.Text = f.Name;
+            HHed.Text = f.Head;
+            DDat.SelectedDate = f.date;
+            PP.Text = f.linkS;
+            ID = f.ID;
+        }
+        public void GEtPrak(Prak f)
+        {
+            zad_Copy.Visibility = Visibility.Visible;
+            PP.Visibility = Visibility.Visible;
+
+            NNam.Text = f.Name;
+            HHed.Text = f.Head;
+            DDat.SelectedDate = f.date;
+            PP.Text = f.linkS;
+            ID = f.ID;
+        }
+        public void GETWH(HeadPark f)
+        {
+           
+            //NNam.Text = f.Name;
+            //HHed.Text = f.Head;
+            //DDat.SelectedDate = f.date;
+            //PP.Text = f.linkS;
+            //ID = f.ID;
         }
     }
 }

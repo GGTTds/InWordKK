@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-        Title="Учебный материал" Height="450" Width="800" ResizeMode="NoResize">
+        Title="Учебный материал" Height="495" Width="905" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/abs0299.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Label x:Name="sd" Content="Лекции" Margin="0,10,0,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Center" Width="192" Foreground="Red" FontWeight="Bold" FontSize="22"/>
-        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="Grid" Margin="80,81,80,85" Foreground="Black" Background="#FF415C7C">
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="Grid" Margin="10,81,10,85" Foreground="Black" Background="#FF415C7C">
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
@@ -46,7 +46,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="ds" Content="Назад" HorizontalAlignment="Center" Margin="608,82,80,0" VerticalAlignment="Top" Height="23" Width="106" Click="Button_Click" BorderBrush="Red">
+        <Button x:Name="ds" Content="Назад" HorizontalAlignment="Center" Margin="783,82,10,0" VerticalAlignment="Top" Height="23" Width="106" Click="Button_Click" BorderBrush="Red">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF3F3F3"/>
@@ -56,17 +56,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Добавить" HorizontalAlignment="Center" Margin="140,369,512,0" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click_1" BorderBrush="Red">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Color="#FFF3F3F3"/>
-                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
-                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
-                    <GradientStop Color="Red" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Content="Удалить" HorizontalAlignment="Center" Margin="483,369,169,0" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click_2" BorderBrush="Red">
+        <Button Content="Добавить" HorizontalAlignment="Center" Margin="380,409,377,0" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click_1" BorderBrush="Red">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF3F3F3"/>

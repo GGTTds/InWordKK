@@ -33,11 +33,16 @@ namespace OTI
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (j == 0)
+            try
             {
-                var s = ((sender as Button).DataContext as leck);
-                Process.Start(s.linkS);
+                if (j == 0)
+                {
+                    var s = ((sender as Button).DataContext as leck);
+                    Process.Start(s.linkS);
+
+                }
             }
+            catch { System.Windows.MessageBox.Show("Неверный путь к файлу"); }
             if (j == 1)
             {
                 using (Model1 v = new Model1())
@@ -60,7 +65,30 @@ namespace OTI
 
         private void EditBtn1_Click(object sender, RoutedEventArgs e)
         {
-            //red
+            if (k == 1)
+            {
+                //l
+                var s = ((sender as Button).DataContext as leck);
+                ADD_all ww = new ADD_all(0,1);
+                ww.GETleck(s);
+                ww.Show();
+
+            }
+            if (k == 2)
+            {
+                var s = ((sender as Button).DataContext as Prak);
+                ADD_all ww = new ADD_all(0, 1);
+                ww.GEtPrak(s);
+                ww.Show();
+            }
+            if (k == 3)
+            {
+                var s = ((sender as Button).DataContext as HeadPark);
+                ADD_all ww = new ADD_all(0, 1);
+                ww.GETWH(s);
+                ww.Show();
+            }
+
         }
 
         public void GetSourGrid(int x)
@@ -120,13 +148,7 @@ namespace OTI
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            
-            
-
-        }
-
+      
         private void ddd_Click(object sender, RoutedEventArgs e)
         {
             //fri
