@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace OTI
 {
@@ -49,8 +50,19 @@ namespace OTI
                 if (j == 0)
                 {
                     var s = ((sender as Button).DataContext as leck);
-                    Process.Start(s.linkS);
+                    if (Static.QStatus == 2)
+                    {
 
+                        FileInfo file = new FileInfo(s.linkS);
+                        file.Attributes = FileAttributes.ReadOnly;
+                        Process.Start(s.linkS);
+                    }
+                    else
+                    {
+                        FileInfo file = new FileInfo(s.linkS);
+                        file.Attributes = FileAttributes.Normal;
+                        Process.Start(s.linkS);
+                    }
                 }
             }
             catch { System.Windows.MessageBox.Show("Неверный путь к файлу"); }
@@ -169,7 +181,20 @@ namespace OTI
         {
             //fri
             var s = ((sender as Button).DataContext as Prak);
-            Process.Start(s.linkS);
+            if (Static.QStatus == 2)
+            {
+                
+                FileInfo file = new FileInfo(s.linkS);
+                file.Attributes = FileAttributes.ReadOnly;
+                Process.Start(s.linkS);
+            }
+            else
+            {
+                FileInfo file = new FileInfo(s.linkS);
+                file.Attributes = FileAttributes.Normal;
+                Process.Start(s.linkS);
+            }
+
         }
 
         private void Window_Activated(object sender, EventArgs e)
