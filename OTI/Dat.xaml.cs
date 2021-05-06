@@ -23,12 +23,15 @@ namespace OTI
     {
         public static int? j = 0;
         public static int? k = 0;
+        public static int? tr = 0;
         public Dat( int g)
         {
             InitializeComponent();
             if (Static.QStatus == 2)
             {
                 WhoIS();
+                GetSourGrid(g);
+                tr = g;
             }
             else
             {
@@ -59,8 +62,7 @@ namespace OTI
                     sd.Content = "Практические работы";
                     Grid.ItemsSource = v.Prak.Where( p => p.WhoHead == s.ID).ToList();
                     Static._IF = s.ID;
-                    if (Static.QStatus == 1)
-                    {
+                    
                         Grid.Columns[3].Visibility = Visibility.Visible;
                         Grid.Columns[0].Visibility = Visibility.Visible;
                         Grid.Columns[1].Visibility = Visibility.Hidden;
@@ -68,7 +70,7 @@ namespace OTI
                         Grid.Columns[2].Width = 150;
                         Static.Nom = s.ID;
                         k = 2;
-                    }
+                    
                     
                 }
             }
@@ -134,12 +136,11 @@ namespace OTI
 
                 Grid.ItemsSource = v.HeadPark.ToList();
                 Grid.Columns[2].Width = 450;
-                if (Static.QStatus == 1)
-                {
+                
                     Grid.Columns[0].Visibility = Visibility.Hidden;
                     Grid.Columns[1].Visibility = Visibility.Visible;
                     Grid.Columns[3].Visibility = Visibility.Hidden;
-                }
+                
             }
         }
 
@@ -242,10 +243,12 @@ namespace OTI
         {
             if(Static.QStatus == 2)
             {
-                Grid.Columns[1].Visibility = Visibility.Hidden;
-                Grid.Columns[5].Visibility = Visibility.Hidden;
-                Grid.Columns[6].Visibility = Visibility.Hidden;
-                fd.Visibility = Visibility.Hidden;
+                    Grid.Columns[0].Visibility = Visibility.Hidden;
+                    Grid.Columns[5].Visibility = Visibility.Hidden;
+                    Grid.Columns[6].Visibility = Visibility.Hidden;
+                    fd.Visibility = Visibility.Hidden;
+                    ds.Visibility = Visibility.Hidden;
+                
             }
         }
     

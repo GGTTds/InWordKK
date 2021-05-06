@@ -53,7 +53,7 @@ namespace OTI
 
         private void RG_Copy_Click(object sender, RoutedEventArgs e)
         {
-            Static.ID = 2;
+            Static.QStatus = 2;
             NextMenu ww = new NextMenu();
             ww.Show();
             this.Close();
