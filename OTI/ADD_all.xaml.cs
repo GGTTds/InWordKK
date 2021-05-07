@@ -41,11 +41,7 @@ namespace OTI
             }
             if (f == 2)
             {
-                
                     WW = 2;
-                   
-                
-
             }
             if (f == 3)
             {
@@ -167,11 +163,6 @@ namespace OTI
                     }
                 }
 
-
-
-
-
-
             }
         }
 
@@ -189,7 +180,8 @@ namespace OTI
         {
             zad_Copy.Visibility = Visibility.Visible;
             PP.Visibility = Visibility.Visible;
-
+            pu.Visibility = Visibility.Hidden;
+            put.Visibility = Visibility.Hidden;
             NNam.Text = f.Name;
             HHed.Text = f.Head;
             DDat.SelectedDate = f.date;
@@ -200,7 +192,8 @@ namespace OTI
         {
             zad_Copy.Visibility = Visibility.Visible;
             PP.Visibility = Visibility.Visible;
-
+            pu.Visibility = Visibility.Hidden;
+            put.Visibility = Visibility.Hidden;
             NNam.Text = f.Name;
             HHed.Text = f.Head;
             DDat.SelectedDate = f.date;

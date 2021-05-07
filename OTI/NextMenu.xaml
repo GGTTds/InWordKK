@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-         Title="Меню" Height="196" Width="262" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+         Title="Меню" Height="196" Width="262" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/abs0299.jpg" TileMode="None" Stretch="UniformToFill"/>

@@ -35,5 +35,15 @@ namespace OTI
             Dat rr = new Dat(2);
             rr.Show();
         }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if( e.Key == Key.Escape)
+            {
+                MainWindow ww = new MainWindow();
+                ww.Show();
+                this.Close();
+            }
+        }
     }
 }

@@ -152,6 +152,7 @@ namespace OTI
                     Grid.Columns[0].Visibility = Visibility.Hidden;
                     Grid.Columns[1].Visibility = Visibility.Visible;
                     Grid.Columns[3].Visibility = Visibility.Hidden;
+                k = 3;
                 
             }
         }
