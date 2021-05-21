@@ -25,7 +25,7 @@
         <Button Click="KPD_Click" x:Name="KPD" Content="Канал передачи данных " HorizontalAlignment="Left" Margin="426,90,0,0" VerticalAlignment="Top" Width="169" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
         <Button Click="DST_Click" x:Name="DST" Content="Дискретная структура" HorizontalAlignment="Left" Margin="426,122,0,0" VerticalAlignment="Top" Width="169" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
         <Button Click="PAM_Click" x:Name="PAM" Content="Память" HorizontalAlignment="Left" Margin="153,186,0,0" VerticalAlignment="Top" Width="132" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
-        <Button Click="INF_Copy_Click" x:Name="INF_Copy" Content="Информация" HorizontalAlignment="Left" Margin="298,186,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="INF_Copy_Click" x:Name="INF_Copy" Content="Мера информации" HorizontalAlignment="Left" Margin="298,186,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
         <Button Click="PPD_Click" x:Name="PPD" Content="Протокол передачи данных" HorizontalAlignment="Left" Margin="426,186,0,0" VerticalAlignment="Top" Width="169" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White" RenderTransformOrigin="0.325,0.407"/>
 
     </Grid>
