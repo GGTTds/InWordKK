@@ -27,6 +27,7 @@ namespace OTI
         public Prak _pra = new Prak();
         public leck _lec = new leck();
         public HeadPark _hea = new HeadPark();
+        public HeadLeck _lea = new HeadLeck();
         public string putin = null;
         public ADD_all(int f, int t)
         {
@@ -37,6 +38,12 @@ namespace OTI
           
             if(f == 1)
             {
+                zad.Visibility = Visibility.Hidden;
+                NNam.Visibility = Visibility.Hidden;
+                zag.Visibility = Visibility.Visible;
+                zag.Visibility = Visibility.Hidden;
+                pu.Visibility = Visibility.Hidden;
+                put.Visibility = Visibility.Hidden;
                 WW = 1;
             }
             if (f == 2)
@@ -52,6 +59,16 @@ namespace OTI
                 pu.Visibility = Visibility.Hidden;
                 put.Visibility = Visibility.Hidden;
                 WW = 3;
+            }
+            if( f == 4)
+            {
+                zad.Visibility = Visibility.Hidden;
+                NNam.Visibility = Visibility.Hidden;
+                zag.Visibility = Visibility.Visible;
+                zag.Visibility = Visibility.Hidden;
+                pu.Visibility = Visibility.Hidden;
+                put.Visibility = Visibility.Hidden;
+                WW = 4;
             }
         }
 
@@ -69,11 +86,9 @@ namespace OTI
                     if (WW == 1)
                     {
 
-                        _lec.Name = NNam.Text;
-                        _lec.Head = HHed.Text;
-                        _lec.date = DDat.SelectedDate;
-                        _lec.linkS = $@"Лекции\{Path.GetFileName(putin)}";
-                        ui.leck.Add(_lec);
+                        _lea.Name = HHed.Text;
+                        _lea.date = DDat.SelectedDate;
+                        ui.HeadLeck.Add(_lea);
                         ui.SaveChanges();
                         System.Windows.MessageBox.Show("Данные сохранены");
                         this.Close();
@@ -100,6 +115,11 @@ namespace OTI
                         System.Windows.MessageBox.Show("Данные сохранены");
                         this.Close();
                     }
+                    if (WW == 4)
+                    {
+
+                      
+                    }
                 }
                 string con = @"data source=localhost\sqlexpress;initial catalog=BDOTI;integrated security=True;MultipleActiveResultSets=True;";
                 if (WWS == 1)
@@ -107,7 +127,6 @@ namespace OTI
                     pu.Visibility = Visibility.Hidden;
                     put.Visibility = Visibility.Hidden;
                     _lec.Name = NNam.Text;
-                    _lec.Head = HHed.Text;
                     _lec.date = DDat.SelectedDate;
                     _lec.linkS = PP.Text;
 
@@ -183,7 +202,6 @@ namespace OTI
             pu.Visibility = Visibility.Hidden;
             put.Visibility = Visibility.Hidden;
             NNam.Text = f.Name;
-            HHed.Text = f.Head;
             DDat.SelectedDate = f.date;
             PP.Text = f.linkS;
             ID = f.ID;

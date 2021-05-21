@@ -51,5 +51,11 @@ namespace OTI
             GSINThis ww = new GSINThis();
             ww.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            SAMRab ww = new SAMRab();
+            ww.Show();
+        }
     }
 }

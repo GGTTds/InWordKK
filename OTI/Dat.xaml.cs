@@ -36,7 +36,7 @@ namespace OTI
             }
             else
             {
-                ds.Visibility = Visibility.Hidden;
+                
                 Grid.Columns[0].Visibility = Visibility.Hidden;
                 GetSourGrid(g);
             }
@@ -49,20 +49,25 @@ namespace OTI
             {
                 if (j == 0)
                 {
-                    var s = ((sender as Button).DataContext as leck);
-                    if (Static.QStatus == 2)
-                    {
+                   
+                        using (Model1 v = new Model1())
+                        {
+                            var t = ((sender as Button).DataContext as HeadLeck);
+                            sd.Content = "Практические работы";
+                            Grid.ItemsSource = v.leck.Where(p => p.WhoIsLec == t.ID).ToList();
+                            Static._IF = t.ID;
 
-                        FileInfo file = new FileInfo(s.linkS);
-                        file.Attributes = FileAttributes.ReadOnly;
-                        Process.Start(s.linkS);
-                    }
-                    else
-                    {
-                        FileInfo file = new FileInfo(s.linkS);
-                        file.Attributes = FileAttributes.Normal;
-                        Process.Start(s.linkS);
-                    }
+                            Grid.Columns[3].Visibility = Visibility.Visible;
+                            Grid.Columns[0].Visibility = Visibility.Visible;
+                            Grid.Columns[1].Visibility = Visibility.Hidden;
+
+                            Grid.Columns[2].Width = 150;
+                            Static.Nom = t.ID;
+                            k = 4;
+
+
+                        }
+                    
                 }
             }
             catch { System.Windows.MessageBox.Show("Неверный путь к файлу"); }
@@ -124,7 +129,8 @@ namespace OTI
                 if (x == 1)
                 {
                     sd.Content = "Лекции";
-                    Grid.ItemsSource = v.leck.ToList();
+                    Grid.ItemsSource = v.HeadLeck.ToList();
+                    Grid.Columns[3].Visibility = Visibility.Hidden;
                     k = 1;
                     j = 0;
                 }
@@ -145,13 +151,24 @@ namespace OTI
         {
             using (Model1 v = new Model1())
             {
-
-                Grid.ItemsSource = v.HeadPark.ToList();
-                Grid.Columns[2].Width = 450;
-                Grid.Columns[0].Visibility = Visibility.Hidden;
-                Grid.Columns[1].Visibility = Visibility.Visible;
-                Grid.Columns[3].Visibility = Visibility.Hidden;
-                k = 3;
+                if (j == 1)
+                {
+                    Grid.ItemsSource = v.HeadPark.ToList();
+                    Grid.Columns[2].Width = 450;
+                    Grid.Columns[0].Visibility = Visibility.Hidden;
+                    Grid.Columns[1].Visibility = Visibility.Visible;
+                    Grid.Columns[3].Visibility = Visibility.Hidden;
+                    k = 3;
+                }
+                if( j == 0)
+                {
+                    Grid.ItemsSource = v.HeadLeck.ToList();
+                    Grid.Columns[2].Width = 100;
+                    Grid.Columns[0].Visibility = Visibility.Hidden;
+                    Grid.Columns[1].Visibility = Visibility.Visible;
+                    Grid.Columns[3].Visibility = Visibility.Hidden;
+                    k = 1;
+                }
                 
             }
         }
@@ -174,25 +191,50 @@ namespace OTI
                 ADD_all ww = new ADD_all(3,0);
                 ww.Show();
             }
+            if (k == 4)
+            {
+                ADD_all ww = new ADD_all(4, 0);
+                ww.Show();
+            }
         }
 
       
         private void ddd_Click(object sender, RoutedEventArgs e)
         {
             //fri
-            var s = ((sender as Button).DataContext as Prak);
-            if (Static.QStatus == 2)
+            if (j == 1)
             {
-                
-                FileInfo file = new FileInfo(s.linkS);
-                file.Attributes = FileAttributes.ReadOnly;
-                Process.Start(s.linkS);
+                var s = ((sender as Button).DataContext as Prak);
+                if (Static.QStatus == 2)
+                {
+
+                    FileInfo file = new FileInfo(s.linkS);
+                    file.Attributes = FileAttributes.ReadOnly;
+                    Process.Start(s.linkS);
+                }
+                else
+                {
+                    FileInfo file = new FileInfo(s.linkS);
+                    file.Attributes = FileAttributes.Normal;
+                    Process.Start(s.linkS);
+                }
             }
-            else
+            if (j == 0)
             {
-                FileInfo file = new FileInfo(s.linkS);
-                file.Attributes = FileAttributes.Normal;
-                Process.Start(s.linkS);
+                var u = ((sender as Button).DataContext as leck);
+                if (Static.QStatus == 2)
+                {
+
+                    FileInfo file = new FileInfo(u.linkS);
+                    file.Attributes = FileAttributes.ReadOnly;
+                    Process.Start(u.linkS);
+                }
+                else
+                {
+                    FileInfo file = new FileInfo(u.linkS);
+                    file.Attributes = FileAttributes.Normal;
+                    Process.Start(u.linkS);
+                }
             }
 
         }
@@ -204,7 +246,7 @@ namespace OTI
                 if( k == 1)
                 {
                     s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                    Grid.ItemsSource = s.leck.ToList();
+                    Grid.ItemsSource = s.HeadLeck.ToList();
                 }
                 if (k == 2)
                 {
@@ -215,6 +257,11 @@ namespace OTI
                 {
                     s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
                     Grid.ItemsSource = s.HeadPark.ToList();
+                }
+                if (k == 4)
+                {
+                    s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                    Grid.ItemsSource = s.leck.ToList();
                 }
             }
         }
@@ -232,9 +279,9 @@ namespace OTI
 
                     if (k == 1)
                     {
-                        var g = ((sender as Button).DataContext as leck);
+                        var g = ((sender as Button).DataContext as HeadLeck);
                         connection.Open();
-                        string kl = $@"DELETE FROM Leck WHERE ID ={g.ID}";
+                        string kl = $@"DELETE FROM HeadLeck WHERE ID ={g.ID}";
                         SqlCommand command = new SqlCommand(kl, connection);
                         int numb = command.ExecuteNonQuery();
                         MessageBox.Show("Запись удалена!");
@@ -271,7 +318,6 @@ namespace OTI
                     Grid.Columns[5].Visibility = Visibility.Hidden;
                     Grid.Columns[6].Visibility = Visibility.Hidden;
                     fd.Visibility = Visibility.Hidden;
-                    ds.Visibility = Visibility.Hidden;
                 
             
         }

@@ -12,22 +12,26 @@ namespace OTI
         {
         }
 
+        public virtual DbSet<HeadLeck> HeadLeck { get; set; }
         public virtual DbSet<HeadPark> HeadPark { get; set; }
         public virtual DbSet<leck> leck { get; set; }
         public virtual DbSet<Prak> Prak { get; set; }
         public virtual DbSet<Roul> Roul { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<SAMost> SAMost { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<HeadLeck>()
+                .HasMany(e => e.leck)
+                .WithOptional(e => e.HeadLeck)
+                .HasForeignKey(e => e.WhoIsLec);
+
             modelBuilder.Entity<HeadPark>()
                 .HasMany(e => e.Prak)
                 .WithOptional(e => e.HeadPark)
                 .HasForeignKey(e => e.WhoHead);
-
-            modelBuilder.Entity<Prak>()
-                .Property(e => e.date);
 
             modelBuilder.Entity<Roul>()
                 .HasMany(e => e.User)

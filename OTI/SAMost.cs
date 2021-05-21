@@ -6,8 +6,8 @@ namespace OTI
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("leck")]
-    public partial class leck
+    [Table("SAMost")]
+    public partial class SAMost
     {
         public int ID { get; set; }
 
@@ -17,10 +17,9 @@ namespace OTI
         public DateTime? date { get; set; }
 
         [StringLength(300)]
-        public string linkS { get; set; }
+        public string head { get; set; }
 
-        public int? WhoIsLec { get; set; }
-
-        public virtual HeadLeck HeadLeck { get; set; }
+        [StringLength(300)]
+        public string LinkS { get; set; }
     }
 }
