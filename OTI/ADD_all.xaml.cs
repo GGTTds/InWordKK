@@ -126,15 +126,14 @@ namespace OTI
                 {
                     pu.Visibility = Visibility.Hidden;
                     put.Visibility = Visibility.Hidden;
-                    _lec.Name = NNam.Text;
-                    _lec.date = DDat.SelectedDate;
-                    _lec.linkS = PP.Text;
+                    _lea.Name = NNam.Text;
+                    _lea.date = DDat.SelectedDate;
 
                     using (SqlConnection connection = new SqlConnection(con))
                     {
 
                         connection.Open();
-                        string kl = $@"UPDATE leck SET Name ='{NNam.Text}', date ='{DDat.SelectedDate}', Head ='{HHed.Text}', linkS='{PP.Text}' WHERE id ={ID}";
+                        string kl = $@"UPDATE HeadLeck SET Name ='{HHed.Text}', date ='{DDat.SelectedDate}' WHERE id ={ID}";
                         SqlCommand command = new SqlCommand(kl, connection);
                         int numb = command.ExecuteNonQuery();
                         System.Windows.MessageBox.Show("Данные сохранены");
@@ -181,6 +180,25 @@ namespace OTI
                         this.Close();
                     }
                 }
+                if (WWS == 4)
+                {
+
+
+                    _lec.Name = NNam.Text;
+                    _lec.date = DDat.SelectedDate;
+                    _lec.linkS = PP.Text;
+
+                    using (SqlConnection connection = new SqlConnection(con))
+                    {
+
+                        connection.Open();
+                        string kl = $@"UPDATE leck SET Name ='{HHed.Text}', date ='{DDat.SelectedDate}', linkS ='{PP.Text}'  WHERE id ={ID}";
+                        SqlCommand command = new SqlCommand(kl, connection);
+                        int numb = command.ExecuteNonQuery();
+                        System.Windows.MessageBox.Show("Данные сохранены");
+                        this.Close();
+                    }
+                }
 
             }
         }
@@ -197,13 +215,29 @@ namespace OTI
 
         public void GETleck(leck f)
         {
+            zag.Visibility = Visibility.Visible;
             zad_Copy.Visibility = Visibility.Visible;
             PP.Visibility = Visibility.Visible;
+            NNam.Visibility = Visibility.Hidden;
+            zag.Visibility = Visibility.Visible;
+            zag.Visibility = Visibility.Hidden;
             pu.Visibility = Visibility.Hidden;
             put.Visibility = Visibility.Hidden;
-            NNam.Text = f.Name;
+            HHed.Text = f.Name;
             DDat.SelectedDate = f.date;
             PP.Text = f.linkS;
+            ID = f.ID;
+        }
+        public void GETHEDleck(HeadLeck f)
+        {
+            zad.Visibility = Visibility.Hidden;
+            NNam.Visibility = Visibility.Hidden;
+            zag.Visibility = Visibility.Visible;
+            zag.Visibility = Visibility.Hidden;
+            pu.Visibility = Visibility.Hidden;
+            put.Visibility = Visibility.Hidden;
+            HHed.Text = f.Name;
+            DDat.SelectedDate = f.date;
             ID = f.ID;
         }
         public void GEtPrak(Prak f)

@@ -99,9 +99,9 @@ namespace OTI
             if (k == 1)
             {
                 //l
-                var s = ((sender as Button).DataContext as leck);
+                var s = ((sender as Button).DataContext as HeadLeck);
                 ADD_all ww = new ADD_all(0,1);
-                ww.GETleck(s);
+                ww.GETHEDleck(s);
                 ww.Show();
 
             }
@@ -117,6 +117,13 @@ namespace OTI
                 var s = ((sender as Button).DataContext as HeadPark);
                 ADD_all ww = new ADD_all(0, 3);
                 ww.GETWH(s);
+                ww.Show();
+            }
+            if (k == 4) /////////////////////////////////////////////////////////////////////////
+            {
+                var s = ((sender as Button).DataContext as leck);
+                ADD_all ww = new ADD_all(0, 4);
+                ww.GETleck(s);
                 ww.Show();
             }
 
