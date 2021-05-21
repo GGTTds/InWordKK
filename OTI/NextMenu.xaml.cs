@@ -48,7 +48,8 @@ namespace OTI
 
         private void GS_Click(object sender, RoutedEventArgs e)
         {
-
+            GSINThis ww = new GSINThis();
+            ww.Show();
         }
     }
 }

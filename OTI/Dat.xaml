@@ -8,10 +8,10 @@
         Title="Учебный материал" Height="495" Width="905" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/abs0299.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="Backgrounds_Binary_code__blue_background_102848_.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Label x:Name="sd" Content="Лекции" Margin="354,10,239,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Center" Width="306" Foreground="Red" FontWeight="Bold" FontSize="22" TextOptions.TextHintingMode="Animated"/>
-        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="Grid" Margin="10,81,10,85" Foreground="Black" Background="#FF415C7C">
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="Grid" Margin="10,81,10,85" Foreground="Black" Background="#FF448ADE">
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>

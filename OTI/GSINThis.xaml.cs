@@ -23,5 +23,85 @@ namespace OTI
         {
             InitializeComponent();
         }
+
+        private void al_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BK_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BOD_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void VP_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void V_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GK_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DE_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DK_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void INT_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void INSY_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ISC_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void KPD_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DST_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PAM_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void INF_Copy_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PPD_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

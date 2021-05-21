@@ -8,7 +8,7 @@
         Title="" Height="363.033" Width="342.858" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="abs0299.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="Fon1.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Label x:Name="zad" Content="Задание" HorizontalAlignment="Left" Margin="21,44,0,0" VerticalAlignment="Top" Width="100" Foreground="Red"/>
         <TextBox x:Name="NNam" HorizontalAlignment="Left" Height="23" Margin="178,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Background="{x:Null}" Foreground="#FFFFC500"/>

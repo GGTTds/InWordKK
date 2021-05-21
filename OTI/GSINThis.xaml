@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-        Title="GSINThis" Height="450" Width="800">
+        Title="Глоссарий" Height="307.31" Width="627.241" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="Fon1.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label Content="Глоссарий по предмету основы теории информации" Margin="115,10,117,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16" Height="38"/>
+        <Button x:Name="al" Content="Алгоритмы" HorizontalAlignment="Left" Margin="26,90,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White" Click="al_Click"/>
+        <Button Click="BK_Click" x:Name="BK" Content="Блочный код" HorizontalAlignment="Left" Margin="26,122,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="BOD_Click" x:Name="BOD" Content="Бод" HorizontalAlignment="Left" Margin="26,154,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="VP_Click" x:Name="VP" Content="Верность передачи" HorizontalAlignment="Left" Margin="26,186,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="V_Click" x:Name="V" Content="Вероятность" HorizontalAlignment="Left" Margin="153,90,0,0" VerticalAlignment="Top" Width="132" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="GK_Click" x:Name="GK" Content="Границы кодирования" HorizontalAlignment="Left" Margin="153,122,0,0" VerticalAlignment="Top" Width="132" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="DE_Click" x:Name="DE" Content="Демодулятор" HorizontalAlignment="Left" Margin="153,154,0,0" VerticalAlignment="Top" Width="132" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="DK_Click" x:Name="DK" Content="Длина кода" HorizontalAlignment="Left" Margin="298,90,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="INT_Click" x:Name="INT" Content="Интерпретатор" HorizontalAlignment="Left" Margin="298,122,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="INSY_Click" x:Name="INSY" Content="Информационная система" HorizontalAlignment="Left" Margin="426,154,0,0" VerticalAlignment="Top" Width="169" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White" RenderTransformOrigin="0.325,0.407"/>
+        <Button Click="ISC_Click" x:Name="ISC" Content="Искажение" HorizontalAlignment="Left" Margin="298,154,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="KPD_Click" x:Name="KPD" Content="Канал передачи данных " HorizontalAlignment="Left" Margin="426,90,0,0" VerticalAlignment="Top" Width="169" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="DST_Click" x:Name="DST" Content="Дискретная структура" HorizontalAlignment="Left" Margin="426,122,0,0" VerticalAlignment="Top" Width="169" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="PAM_Click" x:Name="PAM" Content="Память" HorizontalAlignment="Left" Margin="153,186,0,0" VerticalAlignment="Top" Width="132" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="INF_Copy_Click" x:Name="INF_Copy" Content="Информация" HorizontalAlignment="Left" Margin="298,186,0,0" VerticalAlignment="Top" Width="115" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White"/>
+        <Button Click="PPD_Click" x:Name="PPD" Content="Протокол передачи данных" HorizontalAlignment="Left" Margin="426,186,0,0" VerticalAlignment="Top" Width="169" Height="27" Foreground="#FFA83A3A" BorderBrush="#FF002FCD" Background="White" RenderTransformOrigin="0.325,0.407"/>
+
     </Grid>
 </Window>

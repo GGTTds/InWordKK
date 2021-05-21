@@ -157,6 +157,9 @@
     <Resource Include="Top2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Backgrounds_Binary_code__blue_background_102848_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Fon1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
