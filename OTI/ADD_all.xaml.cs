@@ -64,10 +64,6 @@ namespace OTI
             {
                 zad.Visibility = Visibility.Hidden;
                 NNam.Visibility = Visibility.Hidden;
-                zag.Visibility = Visibility.Visible;
-                zag.Visibility = Visibility.Hidden;
-                pu.Visibility = Visibility.Hidden;
-                put.Visibility = Visibility.Hidden;
                 WW = 4;
             }
         }
@@ -117,8 +113,14 @@ namespace OTI
                     }
                     if (WW == 4)
                     {
-
-                      
+                        _lec.Name = HHed.Text;
+                        _lec.date = DDat.SelectedDate;
+                        _lec.linkS = $@"Лекции\{Path.GetFileName(putin)}";
+                        _lec.WhoIsLec = Static.Nom;
+                        ui.leck.Add(_lec);
+                        ui.SaveChanges();
+                        System.Windows.MessageBox.Show("Данные сохранены");
+                        this.Close();
                     }
                 }
                 string con = @"data source=localhost\sqlexpress;initial catalog=BDOTI;integrated security=True;MultipleActiveResultSets=True;";
@@ -215,12 +217,11 @@ namespace OTI
 
         public void GETleck(leck f)
         {
-            zag.Visibility = Visibility.Visible;
+            zad.Visibility = Visibility.Hidden;
             zad_Copy.Visibility = Visibility.Visible;
             PP.Visibility = Visibility.Visible;
             NNam.Visibility = Visibility.Hidden;
             zag.Visibility = Visibility.Visible;
-            zag.Visibility = Visibility.Hidden;
             pu.Visibility = Visibility.Hidden;
             put.Visibility = Visibility.Hidden;
             HHed.Text = f.Name;

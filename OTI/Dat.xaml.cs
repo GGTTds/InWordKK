@@ -53,11 +53,10 @@ namespace OTI
                         using (Model1 v = new Model1())
                         {
                             var t = ((sender as Button).DataContext as HeadLeck);
-                            sd.Content = "Практические работы";
+                            sd.Content = "Темы лекцций";
                             Grid.ItemsSource = v.leck.Where(p => p.WhoIsLec == t.ID).ToList();
                             Static._IF = t.ID;
-
-                            Grid.Columns[3].Visibility = Visibility.Visible;
+                            Grid.Columns[3].Visibility = Visibility.Hidden;
                             Grid.Columns[0].Visibility = Visibility.Visible;
                             Grid.Columns[1].Visibility = Visibility.Hidden;
 
@@ -268,7 +267,7 @@ namespace OTI
                 if (k == 4)
                 {
                     s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                    Grid.ItemsSource = s.leck.ToList();
+                    Grid.ItemsSource = s.leck.Where(p => p.WhoIsLec == Static._IF).ToList();
                 }
             }
         }
