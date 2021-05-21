@@ -45,5 +45,10 @@ namespace OTI
                 this.Close();
             }
         }
+
+        private void GS_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

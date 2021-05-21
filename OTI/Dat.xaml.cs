@@ -148,10 +148,9 @@ namespace OTI
 
                 Grid.ItemsSource = v.HeadPark.ToList();
                 Grid.Columns[2].Width = 450;
-                
-                    Grid.Columns[0].Visibility = Visibility.Hidden;
-                    Grid.Columns[1].Visibility = Visibility.Visible;
-                    Grid.Columns[3].Visibility = Visibility.Hidden;
+                Grid.Columns[0].Visibility = Visibility.Hidden;
+                Grid.Columns[1].Visibility = Visibility.Visible;
+                Grid.Columns[3].Visibility = Visibility.Hidden;
                 k = 3;
                 
             }
@@ -227,7 +226,7 @@ namespace OTI
             {
                 
                     
-                    string con = @"data source=localhost\sqlexpress;initial catalog=BDOTI;integrated security=True;MultipleActiveResultSets=True;";
+                string con = @"data source=localhost\sqlexpress;initial catalog=BDOTI;integrated security=True;MultipleActiveResultSets=True;";
                 using (SqlConnection connection = new SqlConnection(con))
                 {
 
@@ -267,15 +266,14 @@ namespace OTI
    
     public void WhoIS()
         {
-            if(Static.QStatus == 2)
-            {
+          
                     Grid.Columns[0].Visibility = Visibility.Hidden;
                     Grid.Columns[5].Visibility = Visibility.Hidden;
                     Grid.Columns[6].Visibility = Visibility.Hidden;
                     fd.Visibility = Visibility.Hidden;
                     ds.Visibility = Visibility.Hidden;
                 
-            }
+            
         }
     
     }

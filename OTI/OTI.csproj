@@ -74,6 +74,9 @@
     <Compile Include="Dat.xaml.cs">
       <DependentUpon>Dat.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GSINThis.xaml.cs">
+      <DependentUpon>GSINThis.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HeadPark.cs" />
     <Compile Include="leck.cs" />
     <Compile Include="Model1.cs" />
@@ -90,6 +93,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GSINThis.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,6 +146,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="abs0299.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="4fcf36_0a3bf024774a430bb0970a4109e4bb55_mv2_d_1410_1482_s_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Top2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fon1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

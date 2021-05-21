@@ -5,31 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-         Title="Меню" Height="196" Width="262" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp">
+         Title="Меню" Height="438" Width="389" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/abs0299.jpg" TileMode="None" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="Fon1.jpg" Stretch="UniformToFill" TileMode="FlipY"/>
         </Grid.Background>
-        <Button Content="Лекции" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click" BorderBrush="Red">
+        <Button Content="Лекции" Margin="0,54,89,0" VerticalAlignment="Top" Height="36" Click="Button_Click" BorderBrush="#FFE03A41" HorizontalAlignment="Right" Width="196">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Color="#FFF3F3F3"/>
-                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
-                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
-                    <GradientStop Color="Red" Offset="1"/>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
+                    <GradientStop Color="White" Offset="0.787"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Практические работы" HorizontalAlignment="Center" VerticalAlignment="Top" Height="29" Width="142" Click="Button_Click_1" Margin="0,101,0,0" BorderBrush="Red">
+        <Button Content="Практические работы" HorizontalAlignment="Right" VerticalAlignment="Top" Height="38" Width="196" Click="Button_Click_1" Margin="0,116,89,0" BorderBrush="#FFE03A41">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Color="#FFF3F3F3"/>
-                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
-                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
-                    <GradientStop Color="#FFFD0000" Offset="1"/>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
+                    <GradientStop Color="White" Offset="0.787"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Button Content="Самостоятельные работы" HorizontalAlignment="Right" VerticalAlignment="Top" Height="38" Width="196"  Margin="0,174,89,0" BorderBrush="#FFE03A41">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
+                    <GradientStop Color="White" Offset="0.787"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Тесты" HorizontalAlignment="Right" VerticalAlignment="Top" Height="36" Width="196"  Margin="0,234,89,0" BorderBrush="#FFE03A41">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
+                    <GradientStop Color="White" Offset="0.787"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Введение в дисциплину" HorizontalAlignment="Right" VerticalAlignment="Top" Height="36" Width="196"  Margin="0,290,89,0" BorderBrush="#FFE03A41">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
+                    <GradientStop Color="White" Offset="0.787"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Click="GS_Click" x:Name="GS" Content="Глосарий" HorizontalAlignment="Right" VerticalAlignment="Top" Height="38" Width="196"  Margin="0,348,89,0" BorderBrush="#FFE03A41">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
+                    <GradientStop Color="White" Offset="0.787"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="О ЭУП &quot;ОТИ&quot;" VerticalAlignment="Top" Margin="118,10,0,0" FontWeight="Bold" FontFamily="Times New Roman" FontSize="20" HorizontalAlignment="Left" Width="152"/>
 
     </Grid>
 </Window>
