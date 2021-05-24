@@ -34,7 +34,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Тесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="36" Width="196"  Margin="87,183,0,0" BorderBrush="#FFE03A41">
+        <Button Click="Button_Click_3" Content="Тесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="36" Width="196"  Margin="87,183,0,0" BorderBrush="#FFE03A41">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF5D70C9" Offset="0.916"/>

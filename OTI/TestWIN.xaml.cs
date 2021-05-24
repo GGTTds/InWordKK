@@ -15,13 +15,19 @@ using System.Windows.Shapes;
 namespace OTI
 {
     /// <summary>
-    /// Логика взаимодействия для TESTR.xaml
+    /// Логика взаимодействия для TestWIN.xaml
     /// </summary>
-    public partial class TESTR : Window
+    public partial class TestWIN : Window
     {
-        public TESTR()
+        public TestWIN()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TEST1VAR1 ww = new TEST1VAR1();
+            ww.Show();
         }
     }
 }

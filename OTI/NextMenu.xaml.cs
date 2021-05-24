@@ -57,5 +57,11 @@ namespace OTI
             SAMWIN ww = new SAMWIN();
             ww.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            TestWIN ww = new TestWIN();
+            ww.Show();
+        }
     }
 }

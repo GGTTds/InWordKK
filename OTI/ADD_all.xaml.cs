@@ -133,13 +133,17 @@ namespace OTI
 
                     using (SqlConnection connection = new SqlConnection(con))
                     {
+                        try
+                        {
 
-                        connection.Open();
-                        string kl = $@"UPDATE HeadLeck SET Name ='{HHed.Text}', date ='{DDat.SelectedDate}' WHERE id ={ID}";
-                        SqlCommand command = new SqlCommand(kl, connection);
-                        int numb = command.ExecuteNonQuery();
-                        System.Windows.MessageBox.Show("Данные сохранены");
-                        this.Close();
+                            connection.Open();
+                            string kl = $@"UPDATE HeadLeck SET Name ='{HHed.Text}', date ='{DDat.SelectedDate}' WHERE id ={ID}";
+                            SqlCommand command = new SqlCommand(kl, connection);
+                            int numb = command.ExecuteNonQuery();
+                            System.Windows.MessageBox.Show("Данные сохранены");
+                            this.Close();
+                        }
+                        catch { }
                     }
                 }
                 if (WWS == 2)
