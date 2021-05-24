@@ -8,12 +8,12 @@
         Title="" Height="363.033" Width="342.858" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Fon1.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform"/>
         </Grid.Background>
         <Label x:Name="zad" Content="Задание" HorizontalAlignment="Left" Margin="21,44,0,0" VerticalAlignment="Top" Width="100" Foreground="Red"/>
-        <TextBox x:Name="NNam" HorizontalAlignment="Left" Height="23" Margin="178,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Background="{x:Null}" Foreground="#FFFFC500"/>
+        <TextBox x:Name="NNam" HorizontalAlignment="Left" Height="23" Margin="178,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Background="{x:Null}" Foreground="Black"/>
         <Label x:Name="zag" Content="Заголовок" HorizontalAlignment="Left" Margin="21,102,0,0" VerticalAlignment="Top" Width="100" Foreground="Red"/>
-        <TextBox x:Name="HHed" HorizontalAlignment="Left" Height="57" Margin="178,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Background="{x:Null}" Foreground="#FFFFC500"/>
+        <TextBox x:Name="HHed" HorizontalAlignment="Left" Height="57" Margin="178,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Background="{x:Null}" Foreground="Black"/>
         <Label Content="Дата изучения" HorizontalAlignment="Left" Margin="18,164,0,0" VerticalAlignment="Top" Width="100" Foreground="Red"/>
         <DatePicker x:Name="DDat" HorizontalAlignment="Left" Margin="175,162,0,0" VerticalAlignment="Top" Width="158" Background="Black" Foreground="Blue">
             <DatePicker.BorderBrush>
@@ -39,7 +39,7 @@
         <Button Click="Button_Click_1" Content="Поддтвердить" HorizontalAlignment="Left" Margin="52,314,0,0" VerticalAlignment="Top" Width="100" Background="#FF2AFF09"/>
         <Button Click="Button_Click" Content="Отмена" HorizontalAlignment="Left" Margin="204,314,0,0" VerticalAlignment="Top" Width="100" Background="#FF09FFDD"/>
         <Label x:Name="zad_Copy" Content="Путь" HorizontalAlignment="Left" Margin="18,254,0,0" VerticalAlignment="Top" Width="100" Foreground="Red"/>
-        <TextBox x:Name="PP" HorizontalAlignment="Left" Height="45" Margin="175,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Background="{x:Null}" Foreground="#FFFFC500"/>
+        <TextBox x:Name="PP" HorizontalAlignment="Left" Height="45" Margin="175,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Background="{x:Null}" Foreground="Black"/>
 
     </Grid>
 </Window>
