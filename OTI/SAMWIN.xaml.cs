@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace OTI
 {
@@ -24,12 +25,16 @@ namespace OTI
         {
             InitializeComponent();
             WhoIS();
+            if (Static.QStatus == 2)
+            {
+                WhoISAD();
+            }
 
         }
 
         private void Window_Activated(object sender, EventArgs e)
         {
-          
+            WhoIS();
         }
 
         public void WhoIS()
@@ -75,5 +80,40 @@ namespace OTI
             Static.WhoISSAm = "Типы данных, кодирование, передача данных";
             WhoIS();
         }
+
+        private void ddd_Click(object sender, RoutedEventArgs e)
+        {
+            ADDSAmR ww = new ADDSAmR((sender as Button).DataContext as SAMost,1);
+            ww.Show();
+        }
+
+        private void yd_Click(object sender, RoutedEventArgs e)
+        {
+            string con = @"data source=localhost\sqlexpress;initial catalog=BDOTI;integrated security=True;MultipleActiveResultSets=True;";
+            using (SqlConnection connection = new SqlConnection(con))
+            {
+
+                var g = ((sender as Button).DataContext as SAMost);
+                connection.Open();
+                string kl = $@"DELETE FROM SAMost WHERE ID ={g.ID}";
+                SqlCommand command = new SqlCommand(kl, connection);
+                int numb = command.ExecuteNonQuery();
+                MessageBox.Show("Запись удалена!");
+
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ADDSAmR ww = new ADDSAmR(null,0);
+            ww.Show();
+        }
+   public void WhoISAD()
+        {
+            DDE.Columns[0].Visibility = Visibility.Hidden;
+            DDE.Columns[1].Visibility = Visibility.Hidden;
+            ad.Visibility = Visibility.Hidden;
+        }
+    
     }
 }

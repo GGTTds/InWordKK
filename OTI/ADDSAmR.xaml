@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform"/>
         </Grid.Background>
-        <Button Content="Добавить" Margin="296,238,0,0" VerticalAlignment="Top" Height="29" HorizontalAlignment="Left" Width="111" Click="Button_Click">
+        <Button Content="Подтвердить" Margin="296,238,0,0" VerticalAlignment="Top" Height="29" HorizontalAlignment="Left" Width="111" Click="Button_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -21,7 +21,7 @@
             </Button.Background>
         </Button>
         <Label Content="Введите тему:" HorizontalAlignment="Left" Margin="142,38,0,0" VerticalAlignment="Top" Width="89"/>
-        <TextBox x:Name="tem" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="353" Margin="275,40,0,0"/>
+        <TextBox Text="{Binding Name}" x:Name="tem" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="353" Margin="275,40,0,0"/>
 
     </Grid>
 </Window>

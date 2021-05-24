@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="240.298" Width="346.318" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" >
+        Title="MainWindow" Height="294.298" Width="467.818" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" >
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Fon1.jpg" TileMode="FlipY" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" TileMode="FlipY" Stretch="Uniform"/>
         </Grid.Background>
-        <Label Content="Авторизация" Margin="105,0,0,0" VerticalAlignment="Top" Height="46" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="143" Foreground="Red"/>
-        <Label Content="Логин" HorizontalAlignment="Left" Margin="38,39,0,0" VerticalAlignment="Top" Height="30" Width="93" FontWeight="Bold" Foreground="Red"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" Margin="38,118,0,0" VerticalAlignment="Top" Height="29" Width="108" FontWeight="Bold" Foreground="Red"/>
-        <TextBox x:Name="loggg" HorizontalAlignment="Left" Height="30" Margin="50,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Background="White" SelectionBrush="#FFF52200" BorderBrush="#FF0C0B0B"/>
-        <PasswordBox x:Name="passs" Height="29" HorizontalAlignment="Left" Margin="50,152,0,0" VerticalAlignment="Top" Width="241" Background="White" SelectionBrush="#FFF50D0D" BorderBrush="#FF0A0A0A"/>
-        <Button Click="VX_Click" x:Name="VX" Content="Войти как преподаватель" HorizontalAlignment="Left" Margin="23,202,0,0" VerticalAlignment="Top" Width="158" OpacityMask="Red" Height="29" BorderBrush="#FFDE2222">
+        <Label Content="Авторизация" Margin="153,8,0,0" VerticalAlignment="Top" Height="46" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="143" Foreground="Red"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="71,46,0,0" VerticalAlignment="Top" Height="30" Width="93" FontWeight="Bold" Foreground="Red"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="71,126,0,0" VerticalAlignment="Top" Height="28" Width="108" FontWeight="Bold" Foreground="Red"/>
+        <TextBox x:Name="loggg" HorizontalAlignment="Left" Height="30" Margin="71,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="331" Background="White" SelectionBrush="#FFF52200" BorderBrush="#FF0C0B0B"/>
+        <PasswordBox x:Name="passs" Height="28" HorizontalAlignment="Left" Margin="71,159,0,0" VerticalAlignment="Top" Width="331" Background="White" SelectionBrush="#FFF50D0D" BorderBrush="#FF0A0A0A"/>
+        <Button Click="VX_Click" x:Name="VX" Content="Войти как преподаватель" HorizontalAlignment="Left" Margin="71,243,0,0" VerticalAlignment="Top" Width="158" OpacityMask="Red" Height="28" BorderBrush="#FFDE2222">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF1A4E8D" Offset="0.832"/>
@@ -23,7 +23,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Click="RG_Copy_Click" x:Name="RG_Copy" Content="Войти как студент" HorizontalAlignment="Left" Margin="186,202,0,0" VerticalAlignment="Top" Width="143" OpacityMask="Red" Height="29" BorderBrush="#FFDE2222">
+        <Button Click="RG_Copy_Click" x:Name="RG_Copy" Content="Войти как студент" HorizontalAlignment="Left" Margin="234,243,0,0" VerticalAlignment="Top" Width="143" OpacityMask="Red" Height="28" BorderBrush="#FFDE2222">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF1A4E8D" Offset="0.832"/>
