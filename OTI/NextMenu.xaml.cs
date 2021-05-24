@@ -54,7 +54,7 @@ namespace OTI
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            SAMRab ww = new SAMRab();
+            SAMWIN ww = new SAMWIN();
             ww.Show();
         }
     }

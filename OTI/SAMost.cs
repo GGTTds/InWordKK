@@ -17,9 +17,7 @@ namespace OTI
         public DateTime? date { get; set; }
 
         [StringLength(300)]
-        public string head { get; set; }
+        public string Thems { get; set; }
 
-        [StringLength(300)]
-        public string LinkS { get; set; }
     }
 }

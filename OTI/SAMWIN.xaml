@@ -1,0 +1,24 @@
+﻿<Window x:Class="OTI.SAMWIN" Activated="Window_Activated"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OTI"
+        mc:Ignorable="d"
+        Title="Самостоятельные работы" Height="462" Width="863" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Backgrounds_Binary_code__blue_background_102848_.jpg"/>
+        </Grid.Background>
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" x:Name="DDE" HorizontalAlignment="Left" Height="316" Margin="0,72,0,0" VerticalAlignment="Top" Width="848">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Тема" Binding="{Binding Name}" Width="848"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="w1" Content="Темы рефератов по теме «Информация и ее свойства»" HorizontalAlignment="Left" Margin="96,10,0,0" VerticalAlignment="Top" Width="317" Background="#FFFF7D7D" BorderBrush="#FF0068FF" Click="w1_Click"/>
+        <Button x:Name="w2" Content="Темы презентаций по теме «Системы счисления»" HorizontalAlignment="Left" Margin="433,10,0,0" VerticalAlignment="Top" Width="311" Background="#FFFF7D7D" BorderBrush="#FF0068FF" Click="w2_Click"/>
+        <Button x:Name="w3" Content="Темы краткого конспекта по теме «Типы данных, кодирование, передача данных»" HorizontalAlignment="Left" Margin="175,45,0,0" VerticalAlignment="Top" Width="466" Background="#FFFF7D7D" BorderBrush="#FF0068FF" Click="w3_Click"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="374,400,0,0" VerticalAlignment="Top" Width="106" Background="#FFBB5050"/>
+
+    </Grid>
+</Window>
