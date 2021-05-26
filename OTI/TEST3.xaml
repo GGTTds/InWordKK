@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-       Title="Тест: Информация, свойства информации" Height="500" Width="623.613" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+       Title="Тест: Информация и ее виды" Height="500" Width="623.613" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform" TileMode="Tile"/>

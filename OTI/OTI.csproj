@@ -104,6 +104,9 @@
     <Compile Include="TEST3.xaml.cs">
       <DependentUpon>TEST3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TEST4.xaml.cs">
+      <DependentUpon>TEST4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TestWIN.xaml.cs">
       <DependentUpon>TestWIN.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TEST3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TEST4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

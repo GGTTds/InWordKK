@@ -41,5 +41,11 @@ namespace OTI
             TEST3 ww = new TEST3();
             ww.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            TEST4 ww = new TEST4();
+            ww.Show();
+        }
     }
 }
