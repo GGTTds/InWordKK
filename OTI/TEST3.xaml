@@ -1,0 +1,153 @@
+﻿<Window x:Class="OTI.TEST3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OTI"
+        mc:Ignorable="d"
+       Title="Тест: Информация, свойства информации" Height="500" Width="623.613" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform" TileMode="Tile"/>
+        </Grid.Background>
+        <ScrollViewer x:Name="dad" HorizontalAlignment="Left" Width="606" Margin="2,0,0,-2267">
+            <ScrollViewer.Background>
+                <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform"/>
+            </ScrollViewer.Background>
+            <StackPanel Height="5500">
+
+                <Label Content="Информацию, не зависящую от личного мнения или суждения, можно назвать:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="580" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="достоверной" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="1" FontSize="14"/>
+                <RadioButton Content="актуальной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="1" FontSize="14"/>
+                <RadioButton x:Name="q1" Content="объективной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="1" FontSize="14"/>
+                <RadioButton x:Name="w1" Content="полезной" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="1" FontSize="14"/>
+                <RadioButton Content="понятной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="1" FontSize="14"/>
+                <Label Content="Информацию, отражающую истинное положение дел, называют:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="582" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="полезной" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="2" FontSize="14"/>
+                <RadioButton x:Name="q2" Content="актуальной" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="2" FontSize="14"/>
+                <RadioButton Content="достоверной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="2" FontSize="14"/>
+                <RadioButton Content="объективной" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="2" FontSize="14"/>
+                <RadioButton Content="полной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="2" FontSize="14"/>
+                <Label Content="Информацию, достаточную для решения поставленной задачи, называют:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="584" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="полезной" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="3" FontSize="14"/>
+                <RadioButton Content="актуальной" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="3" FontSize="14"/>
+                <RadioButton x:Name="q3" Content="полной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="3" FontSize="14"/>
+                <RadioButton x:Name="w3" Content="достоверной" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="3" FontSize="14"/>
+                <RadioButton Content="понятной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="3" FontSize="14"/>
+                <Label Content="По способу восприятия информации человеком различают следующие виды &#xD;&#xA;информации:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="570" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="текстовую, числовую, графическую, табличную и пр." HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="4" FontSize="14"/>
+                <RadioButton Content="научную, социальную, политическую, экономическую, религиозную и пр" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="4" FontSize="14"/>
+                <RadioButton Content="обыденную, производственную, техническую, управленческую" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="4" FontSize="14"/>
+                <RadioButton x:Name="q4" Content="визуальную, звуковую, тактильную, обонятельную, вкусовую" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="4" FontSize="14"/>
+                <RadioButton x:Name="w4" Content="математическую, биологическую, медицинскую, психологическую и пр.
+
+" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="4" FontSize="14"/>
+                <Label Content="Визуальной называют информацию, которая воспринимается человеком &#xD;&#xA;посредством:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="578" FontWeight="Bold" FontSize="14"/>
+                <RadioButton x:Name="q5" Content="органов зрения" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="5" FontSize="14"/>
+                <RadioButton x:Name="w5" Content="органами осязания (кожей)" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="5" FontSize="14"/>
+                <RadioButton Content="органом обоняния" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="5" FontSize="14"/>
+                <RadioButton Content="органами слуха" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="5" FontSize="14"/>
+                <RadioButton Content="органами восприятия вкуса" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="5" FontSize="14"/>
+                <Label Content="Аудиоинформацией называют информацию, которая воспринимается 
+                       посредством" HorizontalAlignment="Left" VerticalAlignment="Top" Width="576" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="органов зрения" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="6" FontSize="14"/>
+                <RadioButton x:Name="w6" Content="органами осязания (кожей)" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="6" FontSize="14"/>
+                <RadioButton Content="органом обоняния" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="6" FontSize="14"/>
+                <RadioButton x:Name="q6" Content="органами слуха" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="6" FontSize="14"/>
+                <RadioButton Content="органами восприятия вкуса" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="6" FontSize="14"/>
+                <Label Content="Примером текстовой информации может служить:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="582" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="музыкальное произведение" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="8" FontSize="14"/>
+                <RadioButton Content="таблица умножения на обложке школьной тетради" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="8" FontSize="14"/>
+                <RadioButton x:Name="q7" Content="иллюстрация в книге" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8" FontSize="14"/>
+                <RadioButton x:Name="w7" Content="правило в учебнике родного языка" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="8" FontSize="14"/>
+                <RadioButton Content="фотография" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8" FontSize="14"/>
+                <Label Content="В учебнике по математике одновременно хранится информация" HorizontalAlignment="Left" VerticalAlignment="Top" Width="580" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="исключительно числовая информацию" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="8" FontSize="14"/>
+                <RadioButton x:Name="w8" Content="графическая, звуковая и числовая" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="8" FontSize="14"/>
+                <RadioButton x:Name="q8" Content="графическая, текстовая и звуковая" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8" FontSize="14"/>
+                <RadioButton Content="только текстовая информацию" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="8" FontSize="14"/>
+                <RadioButton Content="текстовая, графическая, числовая" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8" FontSize="14"/>
+                <Label Content="В семантической теории под информацией принято понимать:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="585" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="сведения, полученные из внешнего мира с помощью органов чувств" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="9" FontSize="14"/>
+                <RadioButton Content="сигналы, импульсы, коды, используемые в технических системах" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="9" FontSize="14"/>
+                <RadioButton x:Name="w9" Content="сведения, зафиксированные на бумаге в виде  текста (в знаковой, символьной, &#xD;&#xA;графической или в табличной форме)" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="9" FontSize="14" Width="584"/>
+                <RadioButton Content="сообщение в форме звуковых сигналов" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="9" FontSize="14"/>
+                <RadioButton x:Name="q9" Content="сведения, обладающие новизной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="9" FontSize="14"/>
+                <Label Content="Примером процесса хранения информации может служить:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="579" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="процесс распространения в обществе сведений с помощью &#xD;&#xA;средств массовой информации" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="10" FontSize="14"/>
+                <RadioButton x:Name="q10" Content="последовательность действий человека, направленных на сохранение структуры &#xD;&#xA;данных и их значений, представленных в той или иной форме на материальном &#xD;&#xA;носителе информации (бумаге, бересте, МЛ, МД и пр.)" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="10" FontSize="14"/>
+                <RadioButton Content="процесс ограничения доступа к информации лицам, не имеющим на это права" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="10" FontSize="14"/>
+                <RadioButton x:Name="w10" Content="процесс несанкционированного использования информации" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="10" FontSize="14"/>
+                <RadioButton Content="процесс создания компьютерных банков данных и баз знаний" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="10" FontSize="14"/>
+                <Label Content="Под носителем информации обычно понимают:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="576" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="линию связи" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="11" FontSize="14"/>
+                <RadioButton Content="параметр информационного процесса" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="11" FontSize="14"/>
+                <RadioButton x:Name="w11" Content="устройство хранения данных в персональном компьютере" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="11" FontSize="14"/>
+                <RadioButton Content="компьютер" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="11" FontSize="14"/>
+                <RadioButton x:Name="q11" Content="материальную субстанцию, которую можно использовать для записи, хранения и &#xD;&#xA;(или) передачи информации" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="11" FontSize="14"/>
+                <Label Content="Под поиском информации понимают:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="566" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="получение информации по электронной почте" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="12" FontSize="14"/>
+                <RadioButton Content="передачу информации на большие расстояния с помощью компьютерных систем" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="12" FontSize="14"/>
+                <RadioButton x:Name="q12" Content="получение нужной информации посредством наблюдения за реальной действительностью,&#xD;&#xA; использование каталогов, архивов, справочных систем, компьютерных сетей, &#xD;&#xA;баз данных и баз знаний и т.д." HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="12" FontSize="14"/>
+                <RadioButton x:Name="w12" Content="чтение художественной литературы" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="12" FontSize="14"/>
+                <RadioButton Content="сортировку информации" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="12" FontSize="14"/>
+                <Label Content="Аналоговым называют сигнал:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="549" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="если он может принимать конечное число конкретных значений" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="13" FontSize="14"/>
+                <RadioButton x:Name="q13" Content="если он непрерывно изменяется по амплитуде во времени" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="13" FontSize="14"/>
+                <RadioButton x:Name="w13" Content="если он несет текстовую информацию" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="13" FontSize="14"/>
+                <RadioButton Content="если он несет какую-либо информацию" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="13" FontSize="14"/>
+                <RadioButton Content="если это цифровой сигнал" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="13" FontSize="14"/>
+                <Label Content="Перевод текста с английского языка на русский можно назвать:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="550" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="информационным процессом передачи информации" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="15" FontSize="14"/>
+                <RadioButton Content="информационным процессом поиска информации" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="15" FontSize="14"/>
+                <RadioButton x:Name="q14" Content="информационным процессом обработки информации" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="15" FontSize="14"/>
+                <RadioButton Content="информационным процессом хранения информации" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="15" FontSize="14"/>
+                <RadioButton Content="не является ни одним из выше перечисленных процессов" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="15" FontSize="14"/>
+                <Label Content="Обмен информацией — это:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="570" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="выполнение домашней работы по физике" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="16" FontSize="14"/>
+                <RadioButton Content="наблюдение за поведением рыб в аквариуме" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="16" FontSize="14"/>
+                <RadioButton Content="прослушивание радиопередачи" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="16" FontSize="14"/>
+                <RadioButton x:Name="q15" Content="разговор по телефону" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="16" FontSize="14"/>
+                <RadioButton Content="просмотр видеофильма" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="16" FontSize="14"/>
+                <Label Content="На метеостанции измерение параметров окружающей среды (температуры&#xD;&#xA; воздуха, атмосферного давления, скорости ветра и т. п.) представляет собой" HorizontalAlignment="Left" VerticalAlignment="Top" Width="578" FontWeight="Bold" FontSize="14"/>
+                <RadioButton x:Name="w17" Content="процесс хранения информации" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="17" FontSize="14"/>
+                <RadioButton Content="процесс передачи информации" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="17" FontSize="14"/>
+                <RadioButton Content="процесс защиты информации" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="17" FontSize="14"/>
+                <RadioButton x:Name="q16" Content="процесс получения (сбора) информации" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="17" FontSize="14"/>
+                <RadioButton Content="процесс использования информации" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="17" FontSize="14"/>
+                <Label Content="Сигнал называют дискретным, если" HorizontalAlignment="Left" VerticalAlignment="Top" Width="552" FontWeight="Bold" FontSize="14"/>
+                <RadioButton x:Name="q17" Content="он может принимать конечное число значений" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="18" FontSize="14"/>
+                <RadioButton Content="он непрерывно изменяется по амплитуде во времени" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="18" FontSize="14"/>
+                <RadioButton Content="он несет текстовую информацию" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="18" FontSize="14"/>
+                <RadioButton Content="он несет какую-либо информацию" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="18" FontSize="14"/>
+                <RadioButton Content="этот сигнал можно декодировать" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="18" FontSize="14"/>
+                <Label Content="Какая из последовательностей отражает истинную хронологию:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="575" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="почта, телеграф, телефон, телевидение, радио, компьютерные сети" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="19" FontSize="14"/>
+                <RadioButton Content="почта, радио, телеграф, телефон, телевидение, компьютерные сети" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="19" FontSize="14"/>
+                <RadioButton Content="почта, телевидение, радио, телеграф, телефон, компьютерные сети" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="19" FontSize="14"/>
+                <RadioButton x:Name="w19" Content="почта, телефон, телеграф, телевидение, радио, компьютерные сети" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="19" FontSize="14"/>
+                <RadioButton x:Name="q18" Content="почта, телеграф, телефон, радио, телевидение, компьютерные сети" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="19" FontSize="14"/>
+                <Label Content="Что является причиной перевода информационных ресурсов человечества &#xD;&#xA;на электронные носители:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="587" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="необоснованная политика правительств наиболее развитых стран" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="20" FontSize="14"/>
+                <RadioButton x:Name="q19" Content="объективная потребность в увеличении скорости обработки информации, рост стоимости &#xD;&#xA;бумаги вследствие экологического кризиса" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="20" FontSize="14"/>
+                <RadioButton Content="погоня за сверхприбылями организаций, осуществляющих свою деятельность в сфере информационных технологий" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="20" FontSize="14"/>
+                <RadioButton x:Name="w20" Content="политика производителей компьютеров с целью подавления конкурентов" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="20" FontSize="14"/>
+                <RadioButton Content="необъективная политика правительства в сфере коммуникационных технологий" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="20" FontSize="14"/>
+                <Label Content="Первым средством передачи информации на большие расстояния принято считать:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="383" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Content="радиосвязь" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="15" FontSize="14"/>
+                <RadioButton x:Name="w15" Content="электрический телеграф" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="15" FontSize="14"/>
+                <RadioButton Content="телефон" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="15" FontSize="14"/>
+                <RadioButton x:Name="q20" Content="почту" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="15" FontSize="14"/>
+                <RadioButton Content="компьютерные сети" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="15" FontSize="14"/>
+                <Button  Content="Закончить" Width="387" FontSize="14" Click="Button_Click">
+                    <Button.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF1D2E99" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

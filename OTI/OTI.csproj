@@ -101,6 +101,9 @@
     <Compile Include="TEST2VAR1.xaml.cs">
       <DependentUpon>TEST2VAR1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TEST3.xaml.cs">
+      <DependentUpon>TEST3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TestWIN.xaml.cs">
       <DependentUpon>TestWIN.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TEST2VAR1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TEST3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
