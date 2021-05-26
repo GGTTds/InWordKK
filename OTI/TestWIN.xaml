@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-        Title="TestWIN" Height="245.595" Width="766.113" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Margin="0,0,-6,-196">
+        Title="TestWIN" Height="298.095" Width="778.113" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,-238,-1">
         <Grid.Background>
-            <ImageBrush ImageSource="Logotip-MIFI-_rgb_003.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform"/>
         </Grid.Background>
-        <Button Click="Button_Click" Content="Информация, свойства информации" HorizontalAlignment="Left" Margin="44,60,0,0" VerticalAlignment="Top" Width="240" Height="26">
+        <Button Click="Button_Click" Content="Информация, свойства информации" HorizontalAlignment="Left" Margin="53,33,0,0" VerticalAlignment="Top" Width="240" Height="26">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF204FB2" Offset="0"/>
@@ -18,7 +18,23 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Понятие количества информации" HorizontalAlignment="Left" Margin="44,106,0,0" VerticalAlignment="Top" Width="240" Height="26">
+        <Button  Click="Button_Click_1" Content="Понятие количества информации" HorizontalAlignment="Left" Margin="53,79,0,0" VerticalAlignment="Top" Width="240" Height="26">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF204FB2" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Click="Button_Click" Content="Информация и ее виды" HorizontalAlignment="Left" Margin="53,123,0,0" VerticalAlignment="Top" Width="240" Height="26">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF204FB2" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button  Click="Button_Click_1" Content="Кодирование информации" HorizontalAlignment="Left" Margin="53,169,0,0" VerticalAlignment="Top" Width="240" Height="26">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF204FB2" Offset="0"/>

@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-        Title="Тест: Информация, свойства информации. ВАР 1" Height="500" Width="423.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Тест: Информация, свойства информации" Height="500" Width="423.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform" TileMode="Tile"/>
         </Grid.Background>
         <ScrollViewer x:Name="dad" HorizontalAlignment="Left" Width="406" Margin="2,0,0,-2267">
+            <ScrollViewer.Background>
+                <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform"/>
+            </ScrollViewer.Background>
             <StackPanel Height="5000">
 
                 <Label Content="Какое из нижеприведенных &#xA;утверждений ближе всего раскрывает смысл понятия &#xA;информация, используемая в бытовом общении:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
@@ -37,7 +40,7 @@
                 <RadioButton Content="достоверной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="4"/>
                 <RadioButton Content="полезной" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="4"/>
                 <RadioButton x:Name="w4" Content="полной" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="4"/>
-                <Label Content="Известно, что наибольший объем информации человек&#xA;получает при помощи:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <Label Content="Известно, что наибольший объем информации человек&#xA;получает при помощи:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="350"/>
                 <RadioButton Content="органов слуха" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="5"/>
                 <RadioButton x:Name="w5" Content="органов зрения" HorizontalAlignment="Left"  VerticalAlignment="Top" Checked="RadioButton_Checked" GroupName="5"/>
                 <RadioButton Content="органов осязания" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="5"/>
@@ -49,7 +52,7 @@
                 <RadioButton Content="раскаты грома" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="6"/>
                 <RadioButton Content="вкус яблока" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="6"/>
                 <RadioButton Content="ощущение холода" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="6"/>
-                <Label Content="К аудиоинформации можно отнести информацию, которая&#xA;передается посредством" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <Label Content="К аудиоинформации можно отнести информацию, которая&#xA;передается посредством" HorizontalAlignment="Left" VerticalAlignment="Top" Width="355"/>
                 <RadioButton Content="переноса вещества" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="8"/>
                 <RadioButton Content="электромагнитных волн" HorizontalAlignment="Left"  VerticalAlignment="Top" Checked="RadioButton_Checked" GroupName="8"/>
                 <RadioButton Content="световых волн" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8"/>
@@ -73,7 +76,7 @@
                 <RadioButton Content="журнал" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="10"/>
                 <RadioButton x:Name="w10" Content="кассета с классической музыкой" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="10"/>
                 <RadioButton Content="газета" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="10"/>
-                <Label Content="Примером хранения числовой информации может служить:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <Label Content="Примером хранения числовой информации может служить:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="372"/>
                 <RadioButton Content="разговор по телефону" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="11"/>
                 <RadioButton Content="иллюстрация в книге" HorizontalAlignment="Left"  VerticalAlignment="Top" Checked="RadioButton_Checked" GroupName="11"/>
                 <RadioButton x:Name="w11" Content="таблица значений тригонометрических функций" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="11"/>

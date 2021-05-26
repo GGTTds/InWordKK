@@ -78,7 +78,7 @@ namespace OTI
                     sd.Content = "Практические работы";
                     Grid.ItemsSource = v.Prak.Where( p => p.WhoHead == s.ID).ToList();
                     Static._IF = s.ID;
-                    
+                        Grid.Columns[2].Header = "Практические работы";
                         Grid.Columns[3].Visibility = Visibility.Visible;
                         Grid.Columns[0].Visibility = Visibility.Visible;
                         Grid.Columns[1].Visibility = Visibility.Hidden;
@@ -164,6 +164,7 @@ namespace OTI
                     Grid.Columns[0].Visibility = Visibility.Hidden;
                     Grid.Columns[1].Visibility = Visibility.Visible;
                     Grid.Columns[3].Visibility = Visibility.Hidden;
+                    Grid.Columns[2].Header = "Темы";
                     k = 3;
                 }
                 if( j == 0)
@@ -253,11 +254,13 @@ namespace OTI
                 {
                     s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
                     Grid.ItemsSource = s.HeadLeck.ToList();
+
                 }
                 if (k == 2)
                 {
                     s.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
                     Grid.ItemsSource = s.Prak.Where(p => p.WhoHead == Static._IF).ToList();
+                    Grid.Columns[2].Header = "Практические работы";
                 }
                 if (k == 3)
                 {

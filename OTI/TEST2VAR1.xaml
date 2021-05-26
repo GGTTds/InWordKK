@@ -1,0 +1,103 @@
+﻿<Window x:Class="OTI.TEST2VAR1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OTI"
+        mc:Ignorable="d"
+       Title="Понятие количества информации. Кодирование информации" Height="500" Width="423.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform" TileMode="Tile"/>
+        </Grid.Background>
+        <ScrollViewer x:Name="dad" HorizontalAlignment="Left" Width="406" Margin="2,0,0,-2267">
+            <ScrollViewer.Background>
+                <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform"/>
+            </ScrollViewer.Background>
+            <StackPanel Height="4000">
+                <Label Content="Мера уменьшения неопределенности знания при получении информационных сообщений – это" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton x:Name="e1" Content="количество информации" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="1"/>
+                <RadioButton Content="единица измерения информации" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="1"/>
+                <RadioButton Content="принцип кодирования информации" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="1"/>
+                <RadioButton x:Name="w1" Content="алфавитный подход к знаниям" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="1"/>
+                <Label Content="Этот подход при определении количества информации иногда называют объективным" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton Content="Содержательный" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="2"/>
+                <RadioButton x:Name="e2" Content="Информационный" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="2"/>
+                <RadioButton Content="Алфавитный" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="2"/>
+                <RadioButton Content="Принципиальный" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="2"/>
+                <Label Content="Длиной кода называется" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton Content="количество букв в предложении" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="3"/>
+                <RadioButton x:Name="e3" Content="количество знаков, которое используется при кодировании" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="3"/>
+                <RadioButton Content="количество единиц и нулей" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="3"/>
+                <RadioButton x:Name="w3" Content="количество сантиметров" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="3"/>
+                <Label Content="Правило, описывающее соответствие знаков или их сочетаний &#xD;&#xA;одного алфавита знакам или их сочетаниям другого алфавита – это" HorizontalAlignment="Left" VerticalAlignment="Top" Width="389"/>
+                <RadioButton Content="Информация" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="4"/>
+                <RadioButton Content="Мера знаний" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="4"/>
+                <RadioButton Content="Двоичная система" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="4"/>
+                <RadioButton x:Name="e4" Content="Код" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="4"/>
+                <Label Content="За наименьшую единицу измерения информации принят.." HorizontalAlignment="Left" VerticalAlignment="Top" Width="374"/>
+                <RadioButton Content="1 файл" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="5"/>
+                <RadioButton x:Name="e5" Content="1 бит" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="5"/>
+                <RadioButton Content="1 байт" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="5"/>
+                <RadioButton Content="1 Кбайт" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="5"/>
+                <Label Content="Базовые цвета палитры RGB:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton x:Name="e6" Content="красный, синий и зеленый" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="6"/>
+                <RadioButton x:Name="w6" Content="синий, желтый, зеленый" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="6"/>
+                <RadioButton Content="красный, желтый и зеленый" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="6"/>
+                <RadioButton Content="голубой, желтый и пурпурный" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="6"/>
+                <Label Content="Пиксель на экране монитора представляет собой:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton x:Name="e7" Content="минимальный участок изображения, которому &#xD;&#xA;независимым образом можно задать цвет" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="8"/>
+                <RadioButton Content="двоичный код графической информации" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8"/>
+                <RadioButton Content="электронный луч" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8"/>
+                <RadioButton x:Name="w7" Content="совокупность 16 зерен люминофора" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="8"/>
+                <Label Content="Глубина цвета - это..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton x:Name="e8" Content="количество информации, которое используется для кодирования &#xD;&#xA;цвета одной точки изображения" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="8"/>
+                <RadioButton x:Name="w8" Content="количество информации, которое используется для &#xD;&#xA;кодирования цвета всего изображения" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8"/>
+                <RadioButton Content="количество информации, которое используется для кодирования&#xD;&#xA; цвета всего изображения" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="8"/>
+                <Label Content="Векторные изображения формируются из …" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton Content="Пикселей" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="9"/>
+                <RadioButton x:Name="e9" Content="Графических примитиво" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="9"/>
+                <RadioButton x:Name="w9" Content="Нет правильного ответа" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="9"/>
+                <RadioButton Content="Зерен экрана" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="9"/>
+                <Label Content="Разрешающая способность экрана в текстовом режиме&#xD;&#xA; определяется количеством" HorizontalAlignment="Left" VerticalAlignment="Top" Width="382"/>
+                <RadioButton Content="байтов на символ" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="10"/>
+                <RadioButton Content="символов в строке экрана" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="10"/>
+                <RadioButton x:Name="e10" Content="пикселей по горизонтали и вертикали" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="10"/>
+                <RadioButton x:Name="w10" Content="строк и столбцов на экране" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="10"/>
+                <Label Content="В палитре 32 цвета. Чему равна глубина цвета?" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton Content="2 битау" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="11"/>
+                <RadioButton Content="3 бита" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="11"/>
+                <RadioButton x:Name="w11" Content="4 бита" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="11"/>
+                <RadioButton x:Name="e11" Content="5 бита" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="11"/>
+                <Label Content="Текстовая информация в памяти компьютера кодируется:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="312"/>
+                <RadioButton Content="десятичным кодом" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="12"/>
+                <RadioButton Content="с помощью символов" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="12"/>
+                <RadioButton Content="восьмеричным кодом" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="12"/>
+                <RadioButton x:Name="e12" Content="двоичным кодом" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="12"/>
+                <Label Content="Промежуток времени между двумя измерениями&#xD;&#xA; амплитуды аналогового сигнала - это" HorizontalAlignment="Left" VerticalAlignment="Top" Width="375"/>
+                <RadioButton x:Name="_13" Content="Семпл" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="13"/>
+                <RadioButton Content="Частота" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="13"/>
+                <RadioButton x:Name="w13" Content="Разрядность" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="13"/>
+                <RadioButton Content="Сигнал" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="13"/>
+                <Label Content="14. Количество цветов в палитре (N) &#xD;&#xA;и количество информации, необходимое для &#xD;&#xA;кодирования каждой точки (I), связаны между собой и могут быть &#xD;&#xA;вычислены по формуле:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="379"/>
+                <RadioButton Content="2=N^i" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="15"/>
+                <RadioButton Content="N=2*i" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="15"/>
+                <RadioButton x:Name="w14" Content="I=N*2" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="15"/>
+                <RadioButton x:Name="e14" Content="N=2^i" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="15"/>
+                <Label Content="В таблице кодов ASCII имеют международный стандарт" HorizontalAlignment="Left" VerticalAlignment="Top" Width="383"/>
+                <RadioButton Content="первые 16 кодов" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="16"/>
+                <RadioButton Content="последние 128 кодов" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="16"/>
+                <RadioButton x:Name="e15" Content="первые 128 кодов" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="16"/>
+                <RadioButton x:Name="w161" Content="первые 127 кодов" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="16"/>
+                <Button Click="Button_Click" Content="Закончить" Width="387">
+                    <Button.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF1D2E99" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

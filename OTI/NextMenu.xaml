@@ -5,60 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-         Title="Меню" Height="375" Width="381" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp">
+         Title="Меню" Height="408" Width="480" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Logotip-MIFI-_rgb_001.png" Stretch="Uniform" TileMode="FlipY"/>
+            <ImageBrush ImageSource="Logotip-MIFI-_rgb_003.png" Stretch="Uniform" TileMode="FlipY"/>
         </Grid.Background>
-        <Button Content="Лекции" Margin="87,55,0,0" VerticalAlignment="Top" Height="36" Click="Button_Click" BorderBrush="#FFE03A41" HorizontalAlignment="Left" Width="196">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
-                    <GradientStop Color="White" Offset="0.787"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Content="Практические работы" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="196" Click="Button_Click_1" Margin="87,97,0,0" BorderBrush="#FFE03A41">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
-                    <GradientStop Color="White" Offset="0.787"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Click="Button_Click_2" Content="Самостоятельные работы" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="196"  Margin="87,139,0,0" BorderBrush="#FFE03A41">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
-                    <GradientStop Color="White" Offset="0.787"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Click="Button_Click_3" Content="Тесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="36" Width="196"  Margin="87,183,0,0" BorderBrush="#FFE03A41">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
-                    <GradientStop Color="White" Offset="0.787"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Content="Введение в дисциплину" HorizontalAlignment="Left" VerticalAlignment="Top" Height="36" Width="196"  Margin="87,223,0,0" BorderBrush="#FFE03A41">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
-                    <GradientStop Color="White" Offset="0.787"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Click="GS_Click" x:Name="GS" Content="Глоссарий" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="196"  Margin="87,265,0,0" BorderBrush="#FFE03A41">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5D70C9" Offset="0.916"/>
-                    <GradientStop Color="White" Offset="0.787"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Label Content="ЭУП &quot;ОТИ&quot;" VerticalAlignment="Top" Margin="133,22,0,0" FontWeight="Bold" FontFamily="Times New Roman" FontSize="20" HorizontalAlignment="Left" Width="152"/>
+        <Button Content="Лекции" Margin="110,64,0,0" VerticalAlignment="Top" Height="47" Click="Button_Click" BorderBrush="#FF04126A" HorizontalAlignment="Left" Width="263" Background="{x:Null}" FontWeight="Bold" FontStyle="Italic"/>
+        <Button Content="Практические работы" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="263" Click="Button_Click_1" Margin="110,127,0,0" BorderBrush="#FF04126A" Background="{x:Null}" FontWeight="Bold" FontStyle="Italic"/>
+        <Button Click="Button_Click_2" Content="Самостоятельные работы" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="263"  Margin="110,188,0,0" BorderBrush="#FF04126A" Background="{x:Null}" FontWeight="Bold" FontStyle="Italic"/>
+        <Button Click="Button_Click_3" Content="Тесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="43" Width="263"  Margin="110,254,0,0" BorderBrush="#FF04126A" Background="{x:Null}" FontWeight="Bold" FontStyle="Italic"/>
+        <Button Click="GS_Click" x:Name="GS" Content="Глоссарий" HorizontalAlignment="Left" VerticalAlignment="Top" Height="43" Width="263"  Margin="110,313,0,0" BorderBrush="#FF04126A" Background="{x:Null}" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="ЭУП &quot;Основы теории информации&quot;" VerticalAlignment="Top" Margin="65,22,0,0" FontWeight="Bold" FontFamily="Times New Roman" FontSize="20" HorizontalAlignment="Left" Width="342"/>
 
     </Grid>
 </Window>

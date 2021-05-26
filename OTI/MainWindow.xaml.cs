@@ -39,6 +39,7 @@ namespace OTI
                         n += 1;
                         Static.ID = x.Rol;
                         NextMenu ww = new NextMenu();
+                        Static.QStatus = 1;
                         ww.Show();
                         this.Close();
 

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTI"
         mc:Ignorable="d"
-        Title="Самостоятельные работы" Height="462" Width="863" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Самостоятельные работы" Height="462" Width="887" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" x:Name="DDE" HorizontalAlignment="Left" Height="316" Margin="0,72,0,0" VerticalAlignment="Top" Width="848">
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" x:Name="DDE" HorizontalAlignment="Left" Height="316" Margin="0,72,0,0" VerticalAlignment="Top" Width="871">
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
@@ -23,7 +23,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header="Тема" Binding="{Binding Name}" Width="848"/>
+                <DataGridTextColumn Header="Тема" Binding="{Binding Name}" Width="820"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="w1" Content="Темы рефератов по теме «Информация и ее свойства»" HorizontalAlignment="Left" Margin="96,10,0,0" VerticalAlignment="Top" Width="317" BorderBrush="#FF0068FF" Click="w1_Click">
